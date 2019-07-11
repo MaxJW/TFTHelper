@@ -98,21 +98,23 @@ ul {
     padding-left: 0;
 }
 
-ul.item-selection-list {
+ul.item-selection-list, ul.class-selection-list, ul.origins-selection-list {
     text-align: center;
 }
 
-ul.item-selection-list li {
+ul.item-selection-list li, ul.class-selection-list li, ul.origins-selection-list li  {
     display: inline;
 }
 
-ul.item-selection-list li img {
+ul.item-selection-list li img, ul.class-selection-list li img, ul.origins-selection-list li img {
     box-shadow: 0px 0px 0px 3px #000;
     transition: box-shadow 0.1s linear;
     margin: 0.35rem;
 }
 
-ul.item-selection-list li img:hover, ul.item-selection-list li img.active {
+ul.item-selection-list li img:hover, ul.item-selection-list li img.active, 
+ul.class-selection-list li img:hover, ul.class-selection-list li img.active, 
+ul.origins-selection-list li img:hover, ul.origins-selection-list li img.active {
     box-shadow: 0px 0px 0px 6px var(--lblue);
     cursor: pointer;
 }
@@ -124,10 +126,6 @@ table.item-combo-list {
     border-collapse: collapse;
     border-spacing: 0;
 
-}
-
-table.item-combo-list tr:nth-child(even) {
-    /*background: rgb(245, 245, 245);*/
 }
 
 table.item-combo-list tr td {
@@ -193,7 +191,7 @@ img.i-item {
     }
 
     .i-item, .s-item {
-        max-width: 4.6rem;
+        max-width: 4rem;
     }
 }
   
