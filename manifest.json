@@ -1,0 +1,16 @@
+{
+  "short_name": "TFTH",
+  "name": "TFT Helper",
+  "icons": [
+    {
+      "src": "img/tft-hs-icon.png",
+      "type": "image/png",
+      "sizes": "150x150"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#00497a",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#00497a"
+}
