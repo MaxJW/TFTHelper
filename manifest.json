@@ -1,11 +1,11 @@
 {
-  "short_name": "TFTH",
-  "name": "TFT Helper",
+  "short_name": "TFTHelper",
+  "name": "TFTHelper",
   "icons": [
     {
-      "src": "img/tft-hs-icon.png",
+      "src": "img/tft-hs-splash.png",
       "type": "image/png",
-      "sizes": "150x150"
+      "sizes": "512x512"
     }
   ],
   "start_url": ".",
