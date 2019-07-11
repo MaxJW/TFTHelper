@@ -3,13 +3,14 @@
   "name": "TFT Helper",
   "icons": [
     {
-      "src": "img/tft-hs-icon.png",
+      "src": "tfthelper/img/tft-hs-icon.png",
       "type": "image/png",
       "sizes": "150x150"
     }
   ],
-  "start_url": ".",
+  "start_url": "tfthelper/",
   "background_color": "#00497a",
+  "scope": "tfthelper/",
   "display": "standalone",
   "theme_color": "#00497a"
 }
