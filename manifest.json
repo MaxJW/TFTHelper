@@ -3,7 +3,7 @@
   "name": "TFT Helper",
   "icons": [
     {
-      "src": "tfthelper/img/tft-hs-icon.png",
+      "src": "img/tft-hs-icon.png",
       "type": "image/png",
       "sizes": "150x150"
     }
