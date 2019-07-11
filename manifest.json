@@ -8,9 +8,9 @@
       "sizes": "150x150"
     }
   ],
-  "start_url": "index.html",
+  "start_url": ".",
   "background_color": "#00497a",
-  "scope": "tfthelper/",
+  "scope": "/tfthelper/",
   "display": "standalone",
   "theme_color": "#00497a"
 }
