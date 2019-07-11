@@ -98,6 +98,10 @@ ul {
     padding-left: 0;
 }
 
+ul.item-selection-list {
+    text-align: center;
+}
+
 ul.item-selection-list li {
     display: inline;
 }
