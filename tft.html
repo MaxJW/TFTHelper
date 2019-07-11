@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+        <meta charset="utf-8">
+        <title>TFT Helper</title>
+        <meta name="description" content="Nothing yet.">
+        <meta name="author" content="MaxWilson">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+        <div class="container">
+                <div class="header">
+                        <img src="img/TFT.png">
+                        <h1>TeamFight Tactics Helper</h1>
+                </div>
+                <div class="content">
+                        <div class="items">
+                                <h2>Item Combinations</h2>
+                                <ul class="item-selection-list">
+                                        <li id="bfsword" onclick="allItemsDisplay(this.id, this);"><img class="s-item"
+                                                        src="img/bfsword.png">
+                                        </li>
+                                        <li id="recurvebow" onclick="allItemsDisplay(this.id, this);"><img
+                                                        class="s-item" src="img/recurvebow.png"></li>
+                                        <li id="needlesslylargerod" onclick="allItemsDisplay(this.id, this);"><img
+                                                        class="s-item" src="img/needlesslylargerod.png"></li>
+                                        <li id="tearofthegoddess" onclick="allItemsDisplay(this.id, this);"><img
+                                                        class="s-item" src="img/tearofthegoddess.png"></li>
+                                        <li id="chainvest" onclick="allItemsDisplay(this.id, this);"><img class="s-item"
+                                                        src="img/chainvest.png"></li>
+                                        <li id="negatroncloak" onclick="allItemsDisplay(this.id, this);"><img
+                                                        class="s-item" src="img/negatroncloak.png"></li>
+                                        <li id="giantsbelt" onclick="allItemsDisplay(this.id, this);"><img
+                                                        class="s-item" src="img/giantsbelt.png"></li>
+                                        <li id="spatula" onclick="allItemsDisplay(this.id, this);"><img class="s-item"
+                                                        src="img/spatula.png">
+                                        </li>
+                                </ul>
+                                <table class="item-combo-list">
+                                        <thead>
+                                                <tr
+                                                        class="thi bfsword recurvebow needlesslylargerod tearofthegoddess chainvest negatroncloak giantsbelt spatula">
+                                                        <th>Item Combination</th>
+                                                        <th>Resulting Item</th>
+                                                        <th>Description</th>
+                                                </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr class="bfsword">
+                                                        <td><img class="i-item" src="img/bfsword.png"> + <img class="i-item" src="img/bfsword.png"></td>
+                                                        <td><img class="i-item result" src="img/infinityedge.png"></td>
+                                                        <td>Critical hits or something idk this is a test</td>
+                                                </tr>
+                                                <tr class="bfsword recurvebow">
+                                                        <td><img class="i-item" src="img/bfsword.png"> + <img class="i-item" src="img/recurvebow.png"></td>
+                                                        <td><img class="i-item result" src="img/swordofthedivine.png"></td>
+                                                        <td>Critical hits or something idk this is a test</td>
+                                                </tr>
+                                                <tr class="bfsword needlesslylargerod">
+                                                        <td><img class="i-item" src="img/bfsword.png"> + <img class="i-item" src="img/needlesslylargerod.png"></td>
+                                                        <td><img class="i-item result" src="img/hextechgunblade.png"></td>
+                                                        <td>More information yayyy woooo</td>
+                                                </tr>
+                                                <tr class="bfsword tearofthegoddess">
+                                                        <td><img class="i-item" src="img/bfsword.png"> + <img class="i-item" src="img/tearofthegoddess.png"></td>
+                                                        <td><img class="i-item result" src="img/spearofshojin.png"></td>
+                                                        <td>Wop woofdjkfgd</td>
+                                                </tr>
+                                                <tr class="bfsword chainvest">
+                                                        <td><img class="i-item" src="img/bfsword.png"> + <img class="i-item" src="img/chainvest.png"></td>
+                                                        <td><img class="i-item result" src="img/guardianangel.png"></td>
+                                                        <td>gfjdilsgfjdisglbf</td>
+                                                </tr>
+                                                <tr class="bfsword negatroncloak">
+                                                        <td><img class="i-item" src="img/bfsword.png"> + <img class="i-item" src="img/negatroncloak.png"></td>
+                                                        <td><img class="i-item result" src="img/thebloodthirster.png"></td>
+                                                        <td>U WOT M8</td>
+                                                </tr>
+                                                <tr class="bfsword giantsbelt">
+                                                        <td><img class="i-item" src="img/bfsword.png"> + <img class="i-item" src="img/giantsbelt.png"></td>
+                                                        <td><img class="i-item result" src="img/zekesherald.png"></td>
+                                                        <td>Here is more info</td>
+                                                </tr>
+                                                <tr class="bfsword spatula">
+                                                        <td><img class="i-item" src="img/bfsword.png"> + <img class="i-item" src="img/spatula.png"></td>
+                                                        <td><img class="i-item result" src="img/youmuusghostblade.png"></td>
+                                                        <td>More information</td>
+                                                </tr>
+
+                                                <tr class="recurvebow">
+                                                        <td><img class="i-item" src="img/recurvebow.png"> +
+                                                                <img class="i-item" src="img/recurvebow.png"></td>
+                                                        <td><img class="i-item result" src="img/rapidfirecannon.png">
+                                                        </td>
+                                                </tr>
+                                                <tr class="recurvebow needlesslylargerod">
+                                                        <td><img class="i-item" src="img/recurvebow.png"> + <img
+                                                                        class="i-item" src="img/needlesslylargerod.png">
+                                                        </td>
+                                                        <td><img class="i-item result" src="img/guinsoosrageblade.png">
+                                                        </td>
+                                                </tr>
+                                                <tr class="recurvebow tearofthegoddess">
+                                                        <td><img class="i-item" src="img/recurvebow.png"> + <img
+                                                                        class="i-item" src="img/tearofthegoddess.png">
+                                                        </td>
+                                                        <td><img class="i-item result" src="img/statikkshiv.png">
+                                                        </td>
+                                                </tr>
+                                                <tr class="recurvebow chainvest">
+                                                        <td><img class="i-item" src="img/recurvebow.png"> +
+                                                                <img class="i-item" src="img/chainvest.png"></td>
+                                                        <td><img class="i-item result" src="img/phantomdancer.png"></td>
+                                                </tr>
+                                                <tr class="recurvebow negatroncloak">
+                                                        <td><img class="i-item" src="img/recurvebow.png"> + <img
+                                                                        class="i-item" src="img/negatroncloak.png">
+                                                        </td>
+                                                        <td><img class="i-item result" src="img/cursedblade.png">
+                                                        </td>
+                                                </tr>
+                                                <tr class="recurvebow giantsbelt">
+                                                        <td><img class="i-item" src="img/recurvebow.png">
+                                                                + <img class="i-item" src="img/giantsbelt.png"></td>
+                                                        <td><img class="i-item result" src="img/titanichydra.png"></td>
+                                                </tr>
+                                                <tr class="recurvebow spatula">
+                                                        <td><img class="i-item" src="img/recurvebow.png"> +
+                                                                <img class="i-item" src="img/spatula.png"></td>
+                                                        <td><img class="i-item result"
+                                                                        src="img/bladeoftheruinedking.png"></td>
+                                                </tr>
+
+                                                <tr class="needlesslylargerod">
+                                                        <td><img class="i-item" src="img/needlesslylargerod.png"> + <img
+                                                                        class="i-item" src="img/needlesslylargerod.png">
+                                                        </td>
+                                                        <td><img class="i-item result" src="img/rabadonsdeathcap.png">
+                                                        </td>
+                                                </tr>
+                                                <tr class="needlesslylargerod tearofthegoddess">
+                                                        <td><img class="i-item" src="img/needlesslylargerod.png"> + <img
+                                                                        class="i-item" src="img/tearofthegoddess.png">
+                                                        </td>
+                                                        <td><img class="i-item result" src="img/ludensecho.png">
+                                                        </td>
+                                                </tr>
+                                                <tr class="needlesslylargerod chainvest">
+                                                        <td><img class="i-item" src="img/needlesslylargerod.png">
+                                                                + <img class="i-item" src="img/chainvest.png"></td>
+                                                        <td><img class="i-item result"
+                                                                        src="img/locketoftheironsolari.png"></td>
+                                                </tr>
+                                                <tr class="needlesslylargerod negatroncloak">
+                                                        <td><img class="i-item" src="img/needlesslylargerod.png"> + <img
+                                                                        class="i-item" src="img/negatroncloak.png">
+                                                        </td>
+                                                        <td><img class="i-item result" src="img/ionicspark.png">
+                                                        </td>
+                                                </tr>
+                                                <tr class="needlesslylargerod giantsbelt">
+                                                        <td><img class="i-item" src="img/needlesslylargerod.png">
+                                                                + <img class="i-item" src="img/giantsbelt.png"></td>
+                                                        <td><img class="i-item result" src="img/morellonomicon.png">
+                                                        </td>
+                                                </tr>
+                                                <tr class="needlesslylargerod spatula">
+                                                        <td><img class="i-item" src="img/needlesslylargerod.png"> +
+                                                                <img class="i-item" src="img/spatula.png"></td>
+                                                        <td><img class="i-item result" src="img/yuumi.png"></td>
+                                                </tr>
+
+                                                <tr class="tearofthegoddess">
+                                                        <td><img class="i-item" src="img/tearofthegoddess.png">
+                                                                + <img class="i-item" src="img/tearofthegoddess.png">
+                                                        </td>
+                                                        <td><img class="i-item result" src="img/seraphsembrace.png">
+                                                        </td>
+                                                </tr>
+                                                <tr class="tearofthegoddess chainvest">
+                                                        <td><img class="i-item" src="img/tearofthegoddess.png"> +
+                                                                <img class="i-item" src="img/chainvest.png"></td>
+                                                        <td><img class="i-item result" src="img/frozenheart.png">
+                                                        </td>
+                                                </tr>
+                                                <tr class="tearofthegoddess negatroncloak">
+                                                        <td><img class="i-item" src="img/tearofthegoddess.png">
+                                                                + <img class="i-item" src="img/negatroncloak.png">
+                                                        </td>
+                                                        <td><img class="i-item result" src="img/hush.png"></td>
+                                                </tr>
+                                                <tr class="tearofthegoddess giantsbelt">
+                                                        <td><img class="i-item" src="img/tearofthegoddess.png"> +
+                                                                <img class="i-item" src="img/giantsbelt.png"></td>
+                                                        <td><img class="i-item result" src="img/redemption.png">
+                                                        </td>
+                                                </tr>
+                                                <tr class="tearofthegoddess spatula">
+                                                        <td><img class="i-item" src="img/tearofthegoddess.png"> + <img
+                                                                        class="i-item" src="img/spatula.png"></td>
+                                                        <td><img class="i-item result" src="img/darkin.png"></td>
+                                                </tr>
+
+                                                <tr class="chainvest">
+                                                        <td><img class="i-item" src="img/chainvest.png"> +
+                                                                <img class="i-item" src="img/chainvest.png"></td>
+                                                        <td><img class="i-item result" src="img/thornmail.png">
+                                                        </td>
+                                                </tr>
+                                                <tr class="chainvest negatroncloak">
+                                                        <td><img class="i-item" src="img/chainvest.png">
+                                                                + <img class="i-item" src="img/negatroncloak.png">
+                                                        </td>
+                                                        <td><img class="i-item result" src="img/swordbreaker.png">
+                                                        </td>
+                                                </tr>
+                                                <tr class="chainvest giantsbelt">
+                                                        <td><img class="i-item" src="img/chainvest.png"> +
+                                                                <img class="i-item" src="img/giantsbelt.png"></td>
+                                                        <td><img class="i-item result" src="img/redbuff.png">
+                                                        </td>
+                                                </tr>
+                                                <tr class="chainvest spatula">
+                                                        <td><img class="i-item" src="img/chainvest.png"> +
+                                                                <img class="i-item" src="img/spatula.png"></td>
+                                                        <td><img class="i-item result" src="img/knightsvow.png">
+                                                        </td>
+                                                </tr>
+
+                                                <tr class="negatroncloak">
+                                                        <td><img class="i-item" src="img/negatroncloak.png"> +
+                                                                <img class="i-item" src="img/negatroncloak.png"></td>
+                                                        <td><img class="i-item result" src="img/dragonsclaw.png">
+                                                        </td>
+                                                </tr>
+                                                <tr class="negatroncloak giantsbelt">
+                                                        <td><img class="i-item" src="img/negatroncloak.png"> + <img
+                                                                        class="i-item" src="img/giantsbelt.png"></td>
+                                                        <td><img class="i-item result" src="img/zephyr.png"></td>
+                                                </tr>
+                                                <tr class="negatroncloak spatula">
+                                                        <td><img class="i-item" src="img/negatroncloak.png"> + <img
+                                                                        class="i-item" src="img/spatula.png"></td>
+                                                        <td><img class="i-item result" src="img/runaanshurricane.png">
+                                                        </td>
+                                                </tr>
+
+                                                <tr class="giantsbelt">
+                                                        <td><img class="i-item" src="img/giantsbelt.png"> +
+                                                                <img class="i-item" src="img/giantsbelt.png"></td>
+                                                        <td><img class="i-item result" src="img/warmogsarmour.png">
+                                                        </td>
+                                                </tr>
+                                                <tr class="giantsbelt spatula">
+                                                        <td><img class="i-item" src="img/giantsbelt.png"> +
+                                                                <img class="i-item" src="img/spatula.png"></td>
+                                                        <td><img class="i-item result" src="img/frozenmallet.png"></td>
+                                                </tr>
+
+                                                <tr class="spatula">
+                                                        <td><img class="i-item" src="img/spatula.png"> + <img
+                                                                        class="i-item" src="img/spatula.png"></td>
+                                                        <td><img class="i-item result" src="img/forceofnature.png"></td>
+                                                </tr>
+                                                <tr class="thi">
+                                                        <td colspan="3">Please Select an Item!</td>
+                                                </tr>
+                                        </tbody>
+                                </table>
+                                <!--
+            B.f. Sword
+            Recurve Bow
+            Needlessly Large Rod
+            Tear of the Goddess
+            Chain Vest
+            Negatron Cloak
+            Giant's Belt
+            Spatula
+            -->
+                        </div>
+                        <hr>
+                        <div class="origins">
+                                <h2>Origins</h2>
+                                <!--
+            Demon
+            Dragon
+            Exile
+            Glacial
+            Robot
+            Imperial
+            Noble
+            Ninja
+            Pirate
+            Phantom
+            Wild
+            Void
+            Yordle
+        -->
+                        </div>
+                        <hr>
+                        <div class="classes">
+                                <h2>Classes</h2>
+                                <!--
+            Assassin
+            Blademaster
+            Brawler
+            Elementalist
+            Guardian
+            Gunslinger
+            Knight
+            Ranger
+            Shapeshifter
+            Sorcerer
+        -->
+                        </div>
+                        <hr>
+                        <div class="champions">
+                                <h2>Champions</h2>
+                                <!--
+            Ashe
+            Cho'Gath
+            Draven
+            Garen
+            Gnar
+            Sejuani
+            Anivia
+            Aurelion
+            Brand
+            Darius
+            Kassadin
+            Kayle
+            Kindred
+            Pyke
+            Shyvana
+            Volibear
+            Ahri
+            Akali
+            Blitzcrank
+            Braum
+            Karthus
+            Kennen
+            Kha'Zix
+            Leona
+            Lissandra
+            Lucian
+            Lulu
+            Miss Fortune
+            Morgana
+            Nidalee
+            Swain
+            Varus
+            Vayne
+            Veigar
+            Warwick
+            Yasuo
+            Zed
+            Aatrox
+            Elise
+            Graves
+            Rengar
+            Shen
+            Evelynn
+            Flora
+            Gangplank
+            Katarina
+            Mordekaiser
+            Poppy
+            Rek'Sai
+            Tristana
+        -->
+                        </div>
+                        <div class="push"></div>
+                </div>
+                <footer class="footer">
+                        <a href="http://www.maxwilson.co.uk/" target="_blank">Max Wilson</a>
+                </footer>
+        </div>
+        <script type="text/javascript">
+                window.onload = $('table.item-combo-list tr').hide().filter('.thi').show();
+                function allItemsDisplay(thsVal, e) {
+                        var itch = $('table.item-combo-list tr');
+                        var i = $('img', e);
+
+                        $(".item-selection-list>li>img.active").not(i).removeClass("active");
+                        itch.css('display', 'none');
+
+                        if (i.hasClass('active')) {
+                                i.removeClass('active');
+                                itch.hide().filter('.thi').show();
+                        } else {
+                                i.addClass('active');
+                                itch.hide().filter('.' + thsVal).show();
+                        }
+
+                        $("table.item-combo-list tr").css("background-color", "#fff");
+                        $("table.item-combo-list tr:visible:odd").css("background-color", "rgb(245, 245, 245)");
+                }
+        </script>
+</body>
+
+</html>
