@@ -7,6 +7,7 @@ html, body {
     margin: 0;
     padding: 0;
     height: 100%;
+    width: 100%;
 }
 
 body {
@@ -139,6 +140,38 @@ table.item-combo-list tr td {
 table.item-combo-list tr td img {
     vertical-align: middle;
     /*padding: 0 5px 0 5px;*/
+}
+
+.table-wrapper {
+    width: 100%;
+    overflow: auto;
+}
+
+table.champion-list {
+    width: 100%;
+    table-layout: auto;
+    font-size: 1rem;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+table.champion-list tr td {
+    text-align: center;
+    vertical-align: middle;
+    padding: 5px 1px;
+    word-wrap: break-word;
+}
+
+table.champion-list tr td img {
+    vertical-align: middle;
+}
+
+table.champion-list tr td:nth-child(1) {
+    width: 5%;
+}
+
+table.champion-list tr td:nth-child(8) {
+    width: 45%;
 }
 
 .s-item {
