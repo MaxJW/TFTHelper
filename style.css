@@ -99,15 +99,24 @@ ul {
     padding-left: 0;
 }
 
-ul.item-selection-list, ul.class-selection-list, ul.origins-selection-list {
+ul.item-selection-list,
+ul.class-selection-list,
+ul.origins-selection-list,
+ul.champions-selection-list {
     text-align: center;
 }
 
-ul.item-selection-list li, ul.class-selection-list li, ul.origins-selection-list li  {
+ul.item-selection-list li,
+ul.class-selection-list li,
+ul.origins-selection-list li,
+ul.champions-selection-list li {
     display: inline;
 }
 
-ul.item-selection-list li img, ul.class-selection-list li img, ul.origins-selection-list li img {
+ul.item-selection-list li img,
+ul.class-selection-list li img,
+ul.origins-selection-list li img,
+ul.champions-selection-list li img {
     box-shadow: 0px 0px 0px 3px #000;
     transition: box-shadow 0.1s linear;
     margin: 0.35rem;
@@ -115,7 +124,8 @@ ul.item-selection-list li img, ul.class-selection-list li img, ul.origins-select
 
 ul.item-selection-list li img:hover, ul.item-selection-list li img.active, 
 ul.class-selection-list li img:hover, ul.class-selection-list li img.active, 
-ul.origins-selection-list li img:hover, ul.origins-selection-list li img.active {
+ul.origins-selection-list li img:hover, ul.origins-selection-list li img.active,
+ul.champions-selection-list li img:hover, ul.champions-selection-list li img.active {
     box-shadow: 0px 0px 0px 6px var(--lblue);
     cursor: pointer;
 }
