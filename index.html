@@ -11,7 +11,6 @@
         <meta name="author" content="MaxWilson">
         <link rel="stylesheet" href="style.css">
         <script src="jquery-3.4.1.min.js"></script>
-        <script type="text/javascript" src="filterjs.js"></script>
         <link rel="apple-touch-icon" href="img/tft-hs-icon.png">
         <link rel="manifest" href="manifest.json">
 </head>
@@ -327,10 +326,10 @@
                         <div class="classes">
                                 <h2>Classes</h2>
                                 <ul class="class-selection-list">
-                                        <li id="assassin" onclick="allClassesDisplay(this.id, this);">
+                                        <li id="assassin" onclick="championFilter('class', this.id, this);">
                                                 <img class="s-item" src="img/classes/assassin.png">
                                         </li>
-                                        <li id="blademaster" onclick="allClassesDisplay(this.id, this);">
+                                        <li id="blademaster" onclick="championFilter('class', this.id, this);">
                                                 <img class="s-item" src="img/classes/blademaster.png">
                                         </li>
                                         <li id="brawler" onclick="allClassesDisplay(this.id, this);">
@@ -375,56 +374,56 @@
                         <div class="champions">
                                 <h2>Champions</h2>
                                 <ul class="champions-selection-list">
-                                        <li class="blademaster demon"><img class="s-item" src="img/champions/aatrox.png"></li>
-                                        <li class="sorcerer wild"><img class="s-item" src="img/champions/ahri.png"></li>
-                                        <li class="assassin ninja"><img class="s-item" src="img/champions/akali.png"></li>
-                                        <li class="elementalist glacial"><img class="s-item" src="img/champions/anivia.png"></li>
-                                        <li class="ranger glacial"><img class="s-item" src="img/champions/ashe.png"></li>
-                                        <li class="sorcerer dragon"><img class="s-item" src="img/champions/aurelion-sol.png"></li>
-                                        <li class="brawler robot"><img class="s-item" src="img/champions/blitzcrank.png"></li>
-                                        <li class="elementalist demon"><img class="s-item" src="img/champions/brand.png"></li>
-                                        <li class="guardian glacial"><img class="s-item" src="img/champions/braum.png"></li>
-                                        <li class="brawler void"><img class="s-item" src="img/champions/chogath.png"></li>
-                                        <li class="knight imperial"><img class="s-item" src="img/champions/darius.png"></li>
-                                        <li class="blademaster imperial"><img class="s-item" src="img/champions/draven.png"></li>
-                                        <li class="shapeshifter demon"><img class="s-item" src="img/champions/elise.png"></li>
-                                        <li class="assassin demon"><img class="s-item" src="img/champions/evelynn.png"></li>
-                                        <li class="blademaster noble"><img class="s-item" src="img/champions/fiora.png"></li>
-                                        <li class="gunslinger blademaster pirate"><img class="s-item" src="img/champions/gangplank.png"></li>
-                                        <li class="knight noble"><img class="s-item" src="img/champions/garen.png"></li>
-                                        <li class="shapeshifter wild yordle"><img class="s-item" src="img/champions/gnar.png"></li>
-                                        <li class="gunslinger pirate"><img class="s-item" src="img/champions/graves.png"></li>
-                                        <li class="sorcerer phantom"><img class="s-item" src="img/champions/karthus.png"></li>
-                                        <li class="sorcerer void"><img class="s-item" src="img/champions/kassadin.png"></li>
-                                        <li class="assassin imperial"><img class="s-item" src="img/champions/katarina.png"></li>
-                                        <li class="knight noble"><img class="s-item" src="img/champions/kayle.png"></li>
-                                        <li class="elementalist ninja yordle"><img class="s-item" src="img/champions/kennen.png"></li>
-                                        <li class="assassin void"><img class="s-item" src="img/champions/khazix.png"></li>
-                                        <li class="ranger phantom"><img class="s-item" src="img/champions/kindred.png"></li>
-                                        <li class="guardian noble"><img class="s-item" src="img/champions/leona.png"></li>
-                                        <li class="elementalist glacial"><img class="s-item" src="img/champions/lissandra.png"></li>
-                                        <li class="gunslinger noble"><img class="s-item" src="img/champions/lucian.png"></li>
-                                        <li class="sorcerer yordle"><img class="s-item" src="img/champions/lulu.png"></li>
-                                        <li class="gunslinger pirate"><img class="s-item" src="img/champions/miss-fortune.png"></li>
-                                        <li class="knight phantom"><img class="s-item" src="img/champions/mordekaiser.png"></li>
-                                        <li class="sorcerer demon"><img class="s-item" src="img/champions/morgana.png"></li>
-                                        <li class="shapeshifter wild"><img class="s-item" src="img/champions/nidalee.png"></li>
-                                        <li class="knight yordle"><img class="s-item" src="img/champions/poppy.png"></li>
-                                        <li class="assassin pirate"><img class="s-item" src="img/champions/pyke.png"></li>
-                                        <li class="brawler void"><img class="s-item" src="img/champions/reksai.png"></li>
-                                        <li class="assassin wild"><img class="s-item" src="img/champions/rengar.png"></li>
-                                        <li class="knight glacial"><img class="s-item" src="img/champions/sejuani.png"></li>
-                                        <li class="blademaster ninja"><img class="s-item" src="img/champions/shen.png"></li>
-                                        <li class="shapeshifter dragon"><img class="s-item" src="img/champions/shyvana.png"></li>
-                                        <li class="shapeshifter noble demon"><img class="s-item" src="img/champions/swain.png"></li>
-                                        <li class="gunslinger yordle"><img class="s-item" src="img/champions/tristana.png"></li>
-                                        <li class="ranger demon"><img class="s-item" src="img/champions/varus.png"></li>
-                                        <li class="ranger noble"><img class="s-item" src="img/champions/vayne.png"></li>
-                                        <li class="sorcerer noble"><img class="s-item" src="img/champions/veigar.png"></li>
-                                        <li class="brawler glacial"><img class="s-item" src="img/champions/volibear.png"></li>
-                                        <li class="brawler wild"><img class="s-item" src="img/champions/warwick.png"></li>
-                                        <li class="blademaster exile"><img class="s-item" src="img/champions/yasuo.png"></li>
-                                        <li class="assassin ninja"><img class="s-item" src="img/champions/zed.png"></li>
+                                        <li class="blademaster demon three-cost"><img class="s-item" src="img/champions/aatrox.png"></li>
+                                        <li class="sorcerer wild two-cost"><img class="s-item" src="img/champions/ahri.png"></li>
+                                        <li class="assassin ninja four-cost"><img class="s-item" src="img/champions/akali.png"></li>
+                                        <li class="elementalist glacial five-cost"><img class="s-item" src="img/champions/anivia.png"></li>
+                                        <li class="ranger glacial three-cost"><img class="s-item" src="img/champions/ashe.png"></li>
+                                        <li class="sorcerer dragon four-cost"><img class="s-item" src="img/champions/aurelion-sol.png"></li>
+                                        <li class="brawler robot two-cost"><img class="s-item" src="img/champions/blitzcrank.png"></li>
+                                        <li class="elementalist demon four-cost"><img class="s-item" src="img/champions/brand.png"></li>
+                                        <li class="guardian glacial two-cost"><img class="s-item" src="img/champions/braum.png"></li>
+                                        <li class="brawler void four-cost"><img class="s-item" src="img/champions/chogath.png"></li>
+                                        <li class="knight imperial one-cost"><img class="s-item" src="img/champions/darius.png"></li>
+                                        <li class="blademaster imperial four-cost"><img class="s-item" src="img/champions/draven.png"></li>
+                                        <li class="shapeshifter demon two-cost"><img class="s-item" src="img/champions/elise.png"></li>
+                                        <li class="assassin demon three-cost"><img class="s-item" src="img/champions/evelynn.png"></li>
+                                        <li class="blademaster noble one-cost"><img class="s-item" src="img/champions/fiora.png"></li>
+                                        <li class="gunslinger blademaster pirate three-cost"><img class="s-item" src="img/champions/gangplank.png"></li>
+                                        <li class="knight noble one-cost"><img class="s-item" src="img/champions/garen.png"></li>
+                                        <li class="shapeshifter wild yordle four-cost"><img class="s-item" src="img/champions/gnar.png"></li>
+                                        <li class="gunslinger pirate one-cost"><img class="s-item" src="img/champions/graves.png"></li>
+                                        <li class="sorcerer phantom five-cost"><img class="s-item" src="img/champions/karthus.png"></li>
+                                        <li class="sorcerer void one-cost"><img class="s-item" src="img/champions/kassadin.png"></li>
+                                        <li class="assassin imperial three-cost"><img class="s-item" src="img/champions/katarina.png"></li>
+                                        <li class="knight noble five-cost"><img class="s-item" src="img/champions/kayle.png"></li>
+                                        <li class="elementalist ninja yordle three-cost"><img class="s-item" src="img/champions/kennen.png"></li>
+                                        <li class="assassin void one-cost"><img class="s-item" src="img/champions/khazix.png"></li>
+                                        <li class="ranger phantom four-cost"><img class="s-item" src="img/champions/kindred.png"></li>
+                                        <li class="guardian noble four-cost"><img class="s-item" src="img/champions/leona.png"></li>
+                                        <li class="elementalist glacial two-cost"><img class="s-item" src="img/champions/lissandra.png"></li>
+                                        <li class="gunslinger noble two-cost"><img class="s-item" src="img/champions/lucian.png"></li>
+                                        <li class="sorcerer yordle two-cost"><img class="s-item" src="img/champions/lulu.png"></li>
+                                        <li class="gunslinger pirate five-cost"><img class="s-item" src="img/champions/miss-fortune.png"></li>
+                                        <li class="knight phantom one-cost"><img class="s-item" src="img/champions/mordekaiser.png"></li>
+                                        <li class="sorcerer demon three-cost"><img class="s-item" src="img/champions/morgana.png"></li>
+                                        <li class="shapeshifter wild one-cost"><img class="s-item" src="img/champions/nidalee.png"></li>
+                                        <li class="knight yordle three-cost"><img class="s-item" src="img/champions/poppy.png"></li>
+                                        <li class="assassin pirate two-cost"><img class="s-item" src="img/champions/pyke.png"></li>
+                                        <li class="brawler void two-cost"><img class="s-item" src="img/champions/reksai.png"></li>
+                                        <li class="assassin wild three-cost"><img class="s-item" src="img/champions/rengar.png"></li>
+                                        <li class="knight glacial four-cost"><img class="s-item" src="img/champions/sejuani.png"></li>
+                                        <li class="blademaster ninja two-cost"><img class="s-item" src="img/champions/shen.png"></li>
+                                        <li class="shapeshifter dragon three-cost"><img class="s-item" src="img/champions/shyvana.png"></li>
+                                        <li class="shapeshifter noble demon five-cost"><img class="s-item" src="img/champions/swain.png"></li>
+                                        <li class="gunslinger yordle one-cost"><img class="s-item" src="img/champions/tristana.png"></li>
+                                        <li class="ranger demon two-cost"><img class="s-item" src="img/champions/varus.png"></li>
+                                        <li class="ranger noble one-cost"><img class="s-item" src="img/champions/vayne.png"></li>
+                                        <li class="sorcerer noble three-cost"><img class="s-item" src="img/champions/veigar.png"></li>
+                                        <li class="brawler glacial three-cost"><img class="s-item" src="img/champions/volibear.png"></li>
+                                        <li class="brawler wild one-cost"><img class="s-item" src="img/champions/warwick.png"></li>
+                                        <li class="blademaster exile five-cost"><img class="s-item" src="img/champions/yasuo.png"></li>
+                                        <li class="assassin ninja two-cost"><img class="s-item" src="img/champions/zed.png"></li>
                                 </ul>
                                 <div class="table-wrapper">
                                         <table class="champion-list">
@@ -432,25 +431,12 @@
                                                         <tr class="info">
                                                                 <th>Icon</th>
                                                                 <th>Champion</th>
+                                                                <th>Class</th>
+                                                                <th>Origin</th>
                                                                 <th>Cost</th>
-                                                                <th>Origin(s)</th>
-                                                                <th>Class(es)</th>
-                                                                <th>DPS</th>
-                                                                <th>Armour</th>
-                                                                <th>Ability</th>
                                                         </tr>
                                                 </thead>
                                                 <tbody>
-                                                        <tr class="aatrox">
-                                                                <td><img class="i-item" src="img/champions/aatrox.png"></td>
-                                                                <td>Aatrox</td>
-                                                                <td>3</td>
-                                                                <td>Demon</td>
-                                                                <td>Blademaster</td>
-                                                                <td>42.3</td>
-                                                                <td>25</td>
-                                                                <td>Aatrox cleaves the area in front of him, dealing damage to enemies inside it</td>
-                                                        </tr>
                                                 </tbody>
                                         </table>
                                 </div>
@@ -463,6 +449,89 @@
         </div>
         <script type="text/javascript">
                 window.onload = $('table.item-combo-list tr').hide().filter('.thi').show();
+        </script>
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-app.js"></script>
+
+        <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-firestore.js"></script>
+
+        <script>
+                // Your web app's Firebase configuration
+                var firebaseConfig = {
+                  apiKey: "AIzaSyDJPaJa1iP_FWeq7YIUjWCqPalj7uQhYag",
+                  authDomain: "tfthelper-77e5e.firebaseapp.com",
+                  databaseURL: "https://tfthelper-77e5e.firebaseio.com",
+                  projectId: "tfthelper-77e5e",
+                  storageBucket: "",
+                  messagingSenderId: "635216016657",
+                  appId: "1:635216016657:web:c1ae76ac4cccd681"
+                };
+                // Initialize Firebase
+                firebase.initializeApp(firebaseConfig);
+
+                var db = firebase.firestore();
+        </script>
+
+        <script>
+                function championFilter(oc, val, e) {
+                        var i = $('img', e);
+                        console.log(oc, val);
+
+                        $("." + oc + "-selection-list>li>img.active").not(i).removeClass("active");
+
+                        if (i.hasClass('active')) {
+                                i.removeClass('active');
+                                $(".champion-list tbody tr").remove(); 
+                        } else {
+                                i.addClass('active');
+                                //db.collection("champions").where(oc, "==", val).get().then(function (querySnapshot) {
+                                db.collection("champions").get().then(function (querySnapshot) {
+                                console.log("woo");
+                                var content = '';
+                                querySnapshot.forEach(function (doc) {
+                                        // doc.data() is never undefined for query doc snapshots
+                                        console.log(doc.id, " => ", doc.data());
+                                        var val = doc.data();
+                                        content += '<tr>';
+                                        content += '<td><img class="s-item" src="img/champions/' + val.name + '.png"></td>'
+                                        content += '<td>' + val.name + '</td>';
+                                        content += '<td>' + (val.class).charAt(0).toUpperCase() + (val.class).slice(1) + '</td>';
+                                        content += '<td>' + (val.origin).charAt(0).toUpperCase() + (val.origin).slice(1)  + '</td>';
+                                        content += '<td>' + val.cost + '</td>';
+                                        content += '</tr>';
+                                });
+                                $('.champion-list tbody').append(content);
+                        })
+                                .catch(function (error) {
+                                        console.log("Error getting documents: ", error);
+                                });
+                        }
+                }
+        </script>
+
+        <script>
+                function allItemsDisplay(thsVal, e) {
+                        var itch = $('table.item-combo-list tr');
+                        var i = $('img', e);
+
+                        $(".item-selection-list>li>img.active").not(i).removeClass("active");
+                        itch.css('display', 'none');
+
+                        if (i.hasClass('active')) {
+                                i.removeClass('active');
+                                itch.hide().filter('.thi').show();
+                        } else {
+                                i.addClass('active');
+                                itch.hide().filter('.' + thsVal).show();
+                                if ($(window).height() <= 800) {
+                                        $('html,body').animate({ scrollTop: $(".item-combo-list").offset().top }, 'slow');
+                                }
+                        }
+
+                        //Table Colouring
+                        $("table.item-combo-list tr").css("background-color", "#fff");
+                        $("table.item-combo-list tr:visible:odd").css("background-color", "rgb(245, 245, 245)");
+                }
         </script>
 </body>
 

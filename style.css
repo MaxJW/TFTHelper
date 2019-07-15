@@ -130,6 +130,46 @@ ul.champions-selection-list li img:hover, ul.champions-selection-list li img.act
     cursor: pointer;
 }
 
+ul.champions-selection-list li.one-cost img {
+    box-shadow: 0px 0px 0px 3px #485767;
+}
+
+ul.champions-selection-list li.one-cost img:hover, li.one-cost img.active {
+    box-shadow: 0px 0px 0px 6px #485767;
+}
+
+ul.champions-selection-list li.two-cost img {
+    box-shadow: 0px 0px 0px 3px #099853;
+}
+
+ul.champions-selection-list li.two-cost img:hover, li.two-cost img.active {
+    box-shadow: 0px 0px 0px 6px #099853;
+}
+
+ul.champions-selection-list li.three-cost img {
+    box-shadow: 0px 0px 0px 3px #3fa4cd;
+}
+
+ul.champions-selection-list li.three-cost img:hover, li.three-cost img.active {
+    box-shadow: 0px 0px 0px 6px #3fa4cd;
+}
+
+ul.champions-selection-list li.four-cost img {
+    box-shadow: 0px 0px 0px 3px #e50dc2;
+}
+
+ul.champions-selection-list li.four-cost img:hover, li.four-cost img.active {
+    box-shadow: 0px 0px 0px 6px #e50dc2;
+}
+
+ul.champions-selection-list li.five-cost img {
+    box-shadow: 0px 0px 0px 3px #daaa29;
+}
+
+ul.champions-selection-list li.five-cost img:hover, li.five-cost img.active {
+    box-shadow: 0px 0px 0px 6px #daaa29;
+}
+
 table.item-combo-list {
     width: 100%;
     table-layout: fixed;
