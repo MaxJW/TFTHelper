@@ -170,7 +170,7 @@ ul.champions-selection-list li.five-cost img:hover, li.five-cost img.active {
     box-shadow: 0px 0px 0px 6px #daaa29;
 }
 
-table.item-combo-list {
+table.item-combo-list, table.champion-list {
     width: 100%;
     table-layout: fixed;
     font-size: 1.2rem;
@@ -199,8 +199,8 @@ table.item-combo-list tr td img {
 
 table.champion-list {
     width: 100%;
-    table-layout: auto;
-    font-size: 1rem;
+    table-layout: fixed;
+    font-size: 1.2rem;
     border-collapse: collapse;
     border-spacing: 0;
 }

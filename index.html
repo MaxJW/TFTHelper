@@ -247,7 +247,7 @@
                                                         <td>Gain +1 team size.</td>
                                                 </tr>
                                                 <tr class="thi">
-                                                        <td colspan="3">Please Select an Item.</td>
+                                                        <td colspan="3">Please Select an Item</td>
                                                 </tr>
                                         </tbody>
                                 </table>
@@ -266,43 +266,43 @@
                         <div class="origins">
                                 <h2>Origins</h2>
                                 <ul class="origins-selection-list">
-                                        <li id="demon" onclick="allOriginsDisplay(this.id, this);">
+                                        <li id="demon" onclick="championFilter('origin', this.id, this);">
                                                 <img class="s-item" src="img/origins/demon.png">
                                         </li>
-                                        <li id="dragon" onclick="allOriginsDisplay(this.id, this);">
+                                        <li id="dragon" onclick="championFilter('origin', this.id, this);">
                                                 <img class="s-item" src="img/origins/dragon.png">
                                         </li>
-                                        <li id="exile" onclick="allOriginsDisplay(this.id, this);">
+                                        <li id="exile" onclick="championFilter('origin', this.id, this);">
                                                 <img class="s-item" src="img/origins/exile.png">
                                         </li>
-                                        <li id="glacial" onclick="allOriginsDisplay(this.id, this);">
+                                        <li id="glacial" onclick="championFilter('origin', this.id, this);">
                                                 <img class="s-item" src="img/origins/glacial.png">
                                         </li>
-                                        <li id="robot" onclick="allOriginsDisplay(this.id, this);">
+                                        <li id="robot" onclick="championFilter('origin', this.id, this);">
                                                 <img class="s-item" src="img/origins/robot.png">
                                         </li>
-                                        <li id="imperial" onclick="allOriginsDisplay(this.id, this);">
+                                        <li id="imperial" onclick="championFilter('origin', this.id, this);">
                                                 <img class="s-item" src="img/origins/imperial.png">
                                         </li>
-                                        <li id="noble" onclick="allOriginsDisplay(this.id, this);">
+                                        <li id="noble" onclick="championFilter('origin', this.id, this);">
                                                 <img class="s-item" src="img/origins/noble.png">
                                         </li>
-                                        <li id="ninja" onclick="allOriginsDisplay(this.id, this);">
+                                        <li id="ninja" onclick="championFilter('origin', this.id, this);">
                                                 <img class="s-item" src="img/origins/ninja.png">
                                         </li>
-                                        <li id="pirate" onclick="allOriginsDisplay(this.id, this);">
+                                        <li id="pirate" onclick="championFilter('origin', this.id, this);">
                                                 <img class="s-item" src="img/origins/pirate.png">
                                         </li>
-                                        <li id="phantom" onclick="allOriginsDisplay(this.id, this);">
+                                        <li id="phantom" onclick="championFilter('origin', this.id, this);">
                                                 <img class="s-item" src="img/origins/phantom.png">
                                         </li>
-                                        <li id="wild" onclick="allOriginsDisplay(this.id, this);">
+                                        <li id="wild" onclick="championFilter('origin', this.id, this);">
                                                 <img class="s-item" src="img/origins/wild.png">
                                         </li>
-                                        <li id="void" onclick="allOriginsDisplay(this.id, this);">
+                                        <li id="void" onclick="championFilter('origin', this.id, this);">
                                                 <img class="s-item" src="img/origins/void.png">
                                         </li>
-                                        <li id="yordle" onclick="allOriginsDisplay(this.id, this);">
+                                        <li id="yordle" onclick="championFilter('origin', this.id, this);">
                                                 <img class="s-item" src="img/origins/yordle.png">
                                         </li>
                                 </ul>
@@ -332,28 +332,28 @@
                                         <li id="blademaster" onclick="championFilter('class', this.id, this);">
                                                 <img class="s-item" src="img/classes/blademaster.png">
                                         </li>
-                                        <li id="brawler" onclick="allClassesDisplay(this.id, this);">
+                                        <li id="brawler" onclick="championFilter('class', this.id, this);">
                                                 <img class="s-item" src="img/classes/brawler.png">
                                         </li>
-                                        <li id="elementalist" onclick="allClassesDisplay(this.id, this);">
+                                        <li id="elementalist" onclick="championFilter('class', this.id, this);">
                                                 <img class="s-item" src="img/classes/elementalist.png">
                                         </li>
-                                        <li id="guardian" onclick="allClassesDisplay(this.id, this);">
+                                        <li id="guardian" onclick="championFilter('class', this.id, this);">
                                                 <img class="s-item" src="img/classes/guardian.png">
                                         </li>
-                                        <li id="gunslinger" onclick="allClassesDisplay(this.id, this);">
+                                        <li id="gunslinger" onclick="championFilter('class', this.id, this);">
                                                 <img class="s-item" src="img/classes/gunslinger.png">
                                         </li>
-                                        <li id="knight" onclick="allClassesDisplay(this.id, this);">
+                                        <li id="knight" onclick="championFilter('class', this.id, this);">
                                                 <img class="s-item" src="img/classes/knight.png">
                                         </li>
-                                        <li id="ranger" onclick="allClassesDisplay(this.id, this);">
+                                        <li id="ranger" onclick="championFilter('class', this.id, this);">
                                                 <img class="s-item" src="img/classes/ranger.png">
                                         </li>
-                                        <li id="shapeshifter" onclick="allClassesDisplay(this.id, this);">
+                                        <li id="shapeshifter" onclick="championFilter('class', this.id, this);">
                                                 <img class="s-item" src="img/classes/shapeshifter.png">
                                         </li>
-                                        <li id="sorcerer" onclick="allClassesDisplay(this.id, this);">
+                                        <li id="sorcerer" onclick="championFilter('class', this.id, this);">
                                                 <img class="s-item" src="img/classes/sorcerer.png">
                                         </li>
                                 </ul>
@@ -373,6 +373,22 @@
                         <hr>
                         <div class="champions">
                                 <h2>Champions</h2>
+                                <div class="table-wrapper">
+                                        <table class="champion-list">
+                                                <thead>
+                                                        <tr class="info">
+                                                                <th>Icon</th>
+                                                                <th>Champion</th>
+                                                                <th>Class</th>
+                                                                <th>Origin</th>
+                                                                <th>Cost</th>
+                                                        </tr>
+                                                </thead>
+                                                <tbody>
+                                                        <tr style="background-color:rgb(245, 245, 245)"><td colspan="5">Please Select a Class/Origin</td></tr>
+                                                </tbody>
+                                        </table>
+                                </div>
                                 <ul class="champions-selection-list">
                                         <li class="blademaster demon three-cost"><img class="s-item" src="img/champions/aatrox.png"></li>
                                         <li class="sorcerer wild two-cost"><img class="s-item" src="img/champions/ahri.png"></li>
@@ -425,21 +441,6 @@
                                         <li class="blademaster exile five-cost"><img class="s-item" src="img/champions/yasuo.png"></li>
                                         <li class="assassin ninja two-cost"><img class="s-item" src="img/champions/zed.png"></li>
                                 </ul>
-                                <div class="table-wrapper">
-                                        <table class="champion-list">
-                                                <thead>
-                                                        <tr class="info">
-                                                                <th>Icon</th>
-                                                                <th>Champion</th>
-                                                                <th>Class</th>
-                                                                <th>Origin</th>
-                                                                <th>Cost</th>
-                                                        </tr>
-                                                </thead>
-                                                <tbody>
-                                                </tbody>
-                                        </table>
-                                </div>
                         </div>
                         <div class="push"></div>
                 </div>
@@ -452,26 +453,25 @@
         </script>
         <!-- The core Firebase JS SDK is always required and must be listed first -->
         <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-app.js"></script>
-
+        
         <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-firestore.js"></script>
-
         <script>
                 // Your web app's Firebase configuration
                 var firebaseConfig = {
-                  apiKey: "AIzaSyDJPaJa1iP_FWeq7YIUjWCqPalj7uQhYag",
-                  authDomain: "tfthelper-77e5e.firebaseapp.com",
-                  databaseURL: "https://tfthelper-77e5e.firebaseio.com",
-                  projectId: "tfthelper-77e5e",
-                  storageBucket: "",
-                  messagingSenderId: "635216016657",
-                  appId: "1:635216016657:web:c1ae76ac4cccd681"
+                        apiKey: "AIzaSyDJPaJa1iP_FWeq7YIUjWCqPalj7uQhYag",
+                        authDomain: "tfthelper-77e5e.firebaseapp.com",
+                        databaseURL: "https://tfthelper-77e5e.firebaseio.com",
+                        projectId: "tfthelper-77e5e",
+                        storageBucket: "",
+                        messagingSenderId: "635216016657",
+                        appId: "1:635216016657:web:c1ae76ac4cccd681"
                 };
                 // Initialize Firebase
                 firebase.initializeApp(firebaseConfig);
 
                 var db = firebase.firestore();
         </script>
-
+        
         <script>
                 function championFilter(oc, val, e) {
                         var i = $('img', e);
@@ -481,34 +481,39 @@
 
                         if (i.hasClass('active')) {
                                 i.removeClass('active');
-                                $(".champion-list tbody tr").remove(); 
+                                $(".champion-list tbody tr").remove();
+                                $('.champion-list tbody').append('<tr style="background-color:rgb(245, 245, 245)"><td colspan="5">Please Select a Class/Origin</td></tr>');
                         } else {
                                 i.addClass('active');
-                                //db.collection("champions").where(oc, "==", val).get().then(function (querySnapshot) {
-                                db.collection("champions").get().then(function (querySnapshot) {
-                                console.log("woo");
-                                var content = '';
-                                querySnapshot.forEach(function (doc) {
-                                        // doc.data() is never undefined for query doc snapshots
-                                        console.log(doc.id, " => ", doc.data());
-                                        var val = doc.data();
-                                        content += '<tr>';
-                                        content += '<td><img class="s-item" src="img/champions/' + val.name + '.png"></td>'
-                                        content += '<td>' + val.name + '</td>';
-                                        content += '<td>' + (val.class).charAt(0).toUpperCase() + (val.class).slice(1) + '</td>';
-                                        content += '<td>' + (val.origin).charAt(0).toUpperCase() + (val.origin).slice(1)  + '</td>';
-                                        content += '<td>' + val.cost + '</td>';
-                                        content += '</tr>';
-                                });
-                                $('.champion-list tbody').append(content);
-                        })
-                                .catch(function (error) {
-                                        console.log("Error getting documents: ", error);
-                                });
+                                db.collection("champions").where(oc, "==", val).get().then(function (querySnapshot) {
+                                        var content = '';
+                                        querySnapshot.forEach(function (doc) {
+                                                // doc.data() is never undefined for query doc snapshots
+                                                console.log(doc.id, " => ", doc.data());
+                                                var val = doc.data();
+                                                content += '<tr>';
+                                                content += '<td><img class="s-item" src="img/champions/' + val.icon + '.png"></td>'
+                                                content += '<td>' + val.name + '</td>';
+                                                content += '<td>' + (val.class).charAt(0).toUpperCase() + (val.class).slice(1) + '</td>';
+                                                content += '<td>' + (val.origin).charAt(0).toUpperCase() + (val.origin).slice(1) + '</td>';
+                                                content += '<td>' + val.cost + '</td>';
+                                                content += '</tr>';
+                                        });
+                                        $(".champion-list tbody tr").remove();
+                                        $('.champion-list tbody').append(content);
+                                })
+                                        .catch(function (error) {
+                                                console.log("Error getting documents: ", error);
+                                        });
+                                
+                                $('html,body').animate({ scrollTop: $(".champions").offset().top }, 'slow');
+                                $("table.champion-list tbody tr").css("background-color", "#fff");
+
+                                $("table.champion-list tbody tr:even").css("background-color", "rgb(245, 245, 245)");
                         }
                 }
         </script>
-
+        
         <script>
                 function allItemsDisplay(thsVal, e) {
                         var itch = $('table.item-combo-list tr');
@@ -533,6 +538,6 @@
                         $("table.item-combo-list tr:visible:odd").css("background-color", "rgb(245, 245, 245)");
                 }
         </script>
-</body>
-
-</html>
+        </body>
+        
+        </html>
