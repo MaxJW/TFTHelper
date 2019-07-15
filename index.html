@@ -475,6 +475,9 @@
                         } else {
                                 i.addClass('active');
                                 itch.hide().filter('.' + thsVal).show();
+                                if($(window).height() <= 800) {
+                                        $('html,body').animate({scrollTop: $(".item-combo-list").offset().top},'slow');
+                                }
                         }
 
                         $("table.item-combo-list tr").css("background-color", "#fff");
