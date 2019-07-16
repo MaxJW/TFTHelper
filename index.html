@@ -21,8 +21,8 @@
         <link rel="stylesheet" href="style.css">
         <script src="jquery-3.4.1.min.js"></script>
 
-        <link href="https://unpkg.com/tabulator-tables@4.2.7/dist/css/tabulator.min.css" rel="stylesheet">
-<script type="text/javascript" src="https://unpkg.com/tabulator-tables@4.2.7/dist/js/tabulator.min.js"></script>
+        <link rel="stylesheet" href="tabulator_bootstrap.min.css">
+        <script type="text/javascript" src="tabulator.min.js"></script>
         
         <link rel="apple-touch-icon" href="img/tft-hs-icon.png">
         <link rel="manifest" href="manifest.json">
@@ -454,27 +454,27 @@
 
         <script>
                 var iconFormat = function(cell){ 
-                        return "<img class='s-item' src='img/champions/" + cell.getValue() + ".png'>";
+                        return "<img class='i-item' src='img/champions/" + cell.getValue() + ".png'>";
                 };
                 var classFormat = function(row){
                         if ((row.getData().class).indexOf(',') > -1) { 
                                 var dual = (row.getData().class).split(',');
-                                return "<img class='s-item' src='img/classes/" + dual[0] + ".png'><img class='s-item' src='img/classes/" + dual[1] + ".png'>";
+                                return "<img class='i-item' src='img/classes/" + dual[0] + ".png'><img class='i-item' src='img/classes/" + dual[1] + ".png'>";
                         }
-                        return "<img class='s-item' src='img/classes/" + row.getData().class + ".png'>";
+                        return "<img class='i-item' src='img/classes/" + row.getData().class + ".png'>";
                 };
                 var originFormat = function(row){
                         if ((row.getData().origin).indexOf(',') > -1) { 
                                 var dual = (row.getData().origin).split(',');
-                                return "<img class='s-item' src='img/origins/" + dual[0] + ".png'><img class='s-item' src='img/origins/" + dual[1] + ".png'>";
+                                return "<img class='i-item' src='img/origins/" + dual[0] + ".png'><img class='i-item' src='img/origins/" + dual[1] + ".png'>";
                         }
-                        return "<img class='s-item' src='img/origins/" + row.getData().origin + ".png'>";
+                        return "<img class='i-item' src='img/origins/" + row.getData().origin + ".png'>";
                 };
 
                 var table = new Tabulator(".champion-list", {
                         ajaxURL:"./champions.json",
  	                layout:"fitColumns", //fit columns to width of table (optional)
-                        placeholder:"No Data Set",
+                        placeholder:"Please Select an Origin/Class",
                         resizableColumns:false,
  	                columns:[ //Define Table Columns
 	 	                {title:"Icon", field:"icon", formatter:iconFormat, headerSort:false},
@@ -488,6 +488,7 @@
  	                },
                 });
                 table.redraw();
+                //table.setFilter("name", "=", "none");
         </script>
         
         <script>
@@ -500,7 +501,8 @@
                         
                         if (i.hasClass('active')) {
                                 i.removeClass('active');
-                                table.clearFilter();
+                                table.removeFilter();
+                                //table.setFilter("name", "=", "none");
                         } else {
                                 i.addClass('active');
                                 table.setFilter(oc, "=", val);
