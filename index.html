@@ -402,7 +402,7 @@
                                         <li class="brawler void four-cost"><img class="s-item" src="img/champions/chogath.png"></li>
                                         <li class="knight imperial one-cost"><img class="s-item" src="img/champions/darius.png"></li>
                                         <li class="blademaster imperial four-cost"><img class="s-item" src="img/champions/draven.png"></li>
-                                        <li class="shapeshifter demon two-cost"><img class="s-item" src="img/champions/elise.png"></li>
+                                        <li class="shapeshifter demon one-cost"><img class="s-item" src="img/champions/elise.png"></li>
                                         <li class="assassin demon three-cost"><img class="s-item" src="img/champions/evelynn.png"></li>
                                         <li class="blademaster noble one-cost"><img class="s-item" src="img/champions/fiora.png"></li>
                                         <li class="gunslinger blademaster pirate three-cost"><img class="s-item" src="img/champions/gangplank.png"></li>
@@ -433,6 +433,7 @@
                                         <li class="shapeshifter dragon three-cost"><img class="s-item" src="img/champions/shyvana.png"></li>
                                         <li class="shapeshifter noble demon five-cost"><img class="s-item" src="img/champions/swain.png"></li>
                                         <li class="gunslinger yordle one-cost"><img class="s-item" src="img/champions/tristana.png"></li>
+                                        <li class="sorcerer pirate two-cost"><img class="s-item" src="img/champions/twisted-fate.png"></li>
                                         <li class="ranger demon two-cost"><img class="s-item" src="img/champions/varus.png"></li>
                                         <li class="ranger noble one-cost"><img class="s-item" src="img/champions/vayne.png"></li>
                                         <li class="sorcerer noble three-cost"><img class="s-item" src="img/champions/veigar.png"></li>
@@ -494,8 +495,10 @@
                                                 content += '<tr>';
                                                 content += '<td><img class="s-item" src="img/champions/' + val.icon + '.png"></td>'
                                                 content += '<td>' + val.name + '</td>';
-                                                content += '<td>' + (val.class).charAt(0).toUpperCase() + (val.class).slice(1) + '</td>';
-                                                content += '<td>' + (val.origin).charAt(0).toUpperCase() + (val.origin).slice(1) + '</td>';
+                                                //content += '<td>' + (val.class).charAt(0).toUpperCase() + (val.class).slice(1) + '</td>';
+                                                //content += '<td>' + (val.origin).charAt(0).toUpperCase() + (val.origin).slice(1) + '</td>';
+                                                content += '<td><img class="s-item" src="img/classes/' + val.class + '.png"></td>'
+                                                content += '<td><img class="s-item" src="img/origins/' + val.origin + '.png"></td>'
                                                 content += '<td>' + val.cost + '</td>';
                                                 content += '</tr>';
                                         });
