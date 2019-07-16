@@ -202,7 +202,16 @@ table.item-combo-list tr td img {
     max-width: 2.5rem;
 }
 
-img.i-item {
+.d-item {
+    border-radius: 40%;
+    max-width: 1.344rem;
+}
+
+img.d-item {
+    box-shadow: 0px 0px 0px 1px #000;
+}
+
+img.i-item, img.d-item {
     box-shadow: 0px 0px 0px 2px #000;
 }
 
@@ -224,6 +233,10 @@ img.i-item {
     .i-item, .s-item {
         max-width: 3.6rem;
     }
+
+    .d-item {
+        max-width: 2.5rem;
+    }
 }
   
 @media (min-width:800px) {
@@ -243,6 +256,10 @@ img.i-item {
 
     .i-item, .s-item {
         max-width: 4rem;
+    }
+
+    .d-item {
+        max-width: 3.8rem;
     }
 }
   
@@ -264,4 +281,9 @@ img.i-item {
 
 .result {
     max-width: 4rem;
+}
+
+.tabulator .tabulator-header .tabulator-col .tabulator-col-content .tabulator-col-title {
+    overflow: visible;
+    text-overflow: clip;
 }

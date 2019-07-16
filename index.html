@@ -26,7 +26,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="TeamFight Tactics Helper">
         <meta name="author" content="MaxWilson">
-        <link rel="stylesheet" href="style.css">
         <script src="jquery-3.4.1.min.js"></script>
 
         <link rel="stylesheet" href="tabulator_bootstrap.min.css">
@@ -34,6 +33,8 @@
         
         <link rel="apple-touch-icon" href="img/tft-hs-icon.png">
         <link rel="manifest" href="manifest.json">
+
+        <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -225,8 +226,13 @@
 
                 window.onload = $('table.item-combo-list tr').hide().filter('.thi').show();
 
+                var custom = function(cell){
+                        //Fix styling here
+                        return "<div style='position: relative'><div style='position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);'>" + cell.getValue() + "</div></div>";
+                }
+
                 var itemFormat = function(cell){
-                        return "<img class='i-item' src='img/items/" + cell.getValue() + ".png'>";
+                        return "<img class='i-item' style='vertical-align: middle;' src='img/items/" + cell.getValue() + ".png'>";
                 }
                 var iconFormat = function(cell){ 
                         return "<img class='i-item' src='img/champions/" + cell.getValue() + ".png'>";
@@ -234,14 +240,14 @@
                 var classFormat = function(row){
                         if ((row.getData().class).indexOf(',') > -1) { 
                                 var dual = (row.getData().class).split(',');
-                                return "<img class='i-item' src='img/classes/" + dual[0] + ".png'><span style='padding-right: 7px;'></span><img class='i-item' src='img/classes/" + dual[1] + ".png'>";
+                                return "<img class='d-item' src='img/classes/" + dual[0] + ".png'><span style='padding-right: 7px;'></span><img class='d-item' src='img/classes/" + dual[1] + ".png'>";
                         }
                         return "<img class='i-item' src='img/classes/" + row.getData().class + ".png'>";
                 };
                 var originFormat = function(row){
                         if ((row.getData().origin).indexOf(',') > -1) { 
                                 var dual = (row.getData().origin).split(',');
-                                return "<img class='i-item' src='img/origins/" + dual[0] + ".png'><span style='padding-right: 7px;'></span><img class='i-item' src='img/origins/" + dual[1] + ".png'>";
+                                return "<img class='d-item' src='img/origins/" + dual[0] + ".png'><span style='padding-right: 7px;'></span><img class='d-item' src='img/origins/" + dual[1] + ".png'>";
                         }
                         return "<img class='i-item' src='img/origins/" + row.getData().origin + ".png'>";
                 };
@@ -252,11 +258,11 @@
                         placeholder:"Please Select an Origin/Class",
                         resizableColumns:false,
  	                columns:[
-	 	                {title:"Icon", field:"icon", align:"center", widthGrow:1, formatter:iconFormat, headerSort:false},
-	 	                {title:"Name", field:"name", align:"center", widthGrow:2, sorter:"string"},
-	 	                {title:"Class", field:"class", align:"center", widthGrow:2, sorter:"string", formatter:classFormat},
-	 	                {title:"Origin", field:"origin", align:"center", widthGrow:2, sorter:"string", formatter:originFormat},
-                                {title:"Cost", field:"cost", align:"center", widthGrow:1, sorter:"number"},
+	 	                {title:"Icon", field:"icon", align:"center", widthGrow:3, formatter:iconFormat, headerSort:false},
+	 	                {title:"Name", field:"name", align:"center", widthGrow:4, formatter:custom, sorter:"string"},
+	 	                {title:"Class", field:"class", align:"center", widthGrow:3, sorter:"string", formatter:classFormat},
+	 	                {title:"Origin", field:"origin", align:"center", widthGrow:3, sorter:"string", formatter:originFormat},
+                                {title:"Cost", field:"cost", align:"center", widthGrow:2, sorter:"number"},
  	                ],
  	                rowClick:function(e, row){ //trigger an alert message when the row is clicked
  		                alert("Row " + row.getData().icon + " Clicked!");
@@ -273,12 +279,12 @@
                                 {
                                         title:"Item Combination",
                                         columns:[
-                                        {title:"Base", field:"base", sorter:"string", align:"center", widthGrow:1, formatter:itemFormat, headerSort:false},
-	 	                        {title:"Combo", field:"combo", sorter:"string", align:"center", widthGrow:1, formatter:itemFormat, headerSort:false},
+                                        {title:"Base", field:"base", sorter:"string", align:"center", widthGrow:2, formatter:itemFormat, headerSort:false},
+	 	                        {title:"Combo", field:"combo", sorter:"string", align:"center", widthGrow:2, formatter:itemFormat, headerSort:false},
                                         ],
                                 },
 	 	                {title:"Result", field:"result", sorter:"string", align:"center", widthGrow:2, formatter:itemFormat, headerSort:false},
-                                {title:"Description", field:"desc", sorter:"string", widthGrow:3, headerSort:false},
+                                {title:"Description", field:"desc", sorter:"string", formatter:"textarea", widthGrow:4, headerSort:false},
  	                ],
  	                rowClick:function(e, row){ //trigger an alert message when the row is clicked
  		                alert("Row " + row.getData().base + row.getData().combo + " Clicked!");
