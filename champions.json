@@ -166,5 +166,194 @@
         "class": "elementalist",
         "origin": "ninja,yordle",
         "cost": 5
+    },
+    {
+        "icon": "khazix",
+        "name": "Kha'Zix",
+        "class": "assassin",
+        "origin": "void",
+        "cost": 1
+    },
+    {
+        "icon": "kindred",
+        "name": "Kindred",
+        "class": "ranger",
+        "origin": "phantom",
+        "cost": 4
+    },
+    {
+        "icon": "leona",
+        "name": "Leona",
+        "class": "guardian",
+        "origin": "noble",
+        "cost": 4
+    },
+    {
+        "icon": "lissandra",
+        "name": "Lissandra",
+        "class": "elementalist",
+        "origin": "glacial",
+        "cost": 2
+    },
+    {
+        "icon": "lucian",
+        "name": "Lucian",
+        "class": "gunslinger",
+        "origin": "noble",
+        "cost": 2
+    },
+    {
+        "icon": "lulu",
+        "name": "Lulu",
+        "class": "sorcerer",
+        "origin": "yordle",
+        "cost": 2
+    },
+    {
+        "icon": "miss-fortune",
+        "name": "Miss Fortune",
+        "class": "gunslinger",
+        "origin": "pirate",
+        "cost": 5
+    },
+    {
+        "icon": "mordekaiser",
+        "name": "Morderkaiser",
+        "class": "knight",
+        "origin": "phantom",
+        "cost": 1
+    },
+    {
+        "icon": "morgana",
+        "name": "Morgana",
+        "class": "sorcerer",
+        "origin": "demon",
+        "cost": 3
+    },
+    {
+        "icon": "nidalee",
+        "name": "Nidalee",
+        "class": "shapeshifter",
+        "origin": "wild",
+        "cost": 1
+    },
+    {
+        "icon": "poppy",
+        "name": "Poppy",
+        "class": "knight",
+        "origin": "yordle",
+        "cost": 3
+    },
+    {
+        "icon": "pyke",
+        "name": "Pyke",
+        "class": "assassin",
+        "origin": "pirate",
+        "cost": 2
+    },
+    {
+        "icon": "reksai",
+        "name": "Rek'Sai",
+        "class": "brawler",
+        "origin": "void",
+        "cost": 2
+    },
+    {
+        "icon": "rengar",
+        "name": "Rengar",
+        "class": "assassin",
+        "origin": "wild",
+        "cost": 3
+    },
+    {
+        "icon": "sejuani",
+        "name": "Sejuani",
+        "class": "knight",
+        "origin": "glacial",
+        "cost": 4
+    },
+    {
+        "icon": "shen",
+        "name": "Shen",
+        "class": "blademaster",
+        "origin": "ninja",
+        "cost": 2
+    },
+    {
+        "icon": "shyvana",
+        "name": "Shyvana",
+        "class": "shapeshifter",
+        "origin": "dragon",
+        "cost": 3
+    },
+    {
+        "icon": "swain",
+        "name": "Swain",
+        "class": "shapeshifter",
+        "origin": "noble,demon",
+        "cost": 5
+    },
+    {
+        "icon": "tristana",
+        "name": "Tristana",
+        "class": "gunslinger",
+        "origin": "yordle",
+        "cost": 1
+    },
+    {
+        "icon": "twisted-fate",
+        "name": "Twisted Fate",
+        "class": "sorcerer",
+        "origin": "pirate",
+        "cost": 2
+    },
+    {
+        "icon": "varus",
+        "name": "Varus",
+        "class": "ranger",
+        "origin": "demon",
+        "cost": 2
+    },
+    {
+        "icon": "vayne",
+        "name": "Vayne",
+        "class": "ranger",
+        "origin": "noble",
+        "cost": 1
+    },
+    {
+        "icon": "veigar",
+        "name": "Veigar",
+        "class": "sorcerer",
+        "origin": "yordle",
+        "cost": 3
+    },
+    {
+        "icon": "volibear",
+        "name": "Volibear",
+        "class": "brawler",
+        "origin": "glacial",
+        "cost": 3
+    },
+    {
+        "icon": "warwick",
+        "name": "Warwick",
+        "class": "brawler",
+        "origin": "wild",
+        "cost": 1
+    },
+    {
+        "icon": "yasuo",
+        "name": "Yasuo",
+        "class": "blademaster",
+        "origin": "exile",
+        "cost": 5
+    },
+    {
+        "icon": "zed",
+        "name": "Zed",
+        "class": "assassin",
+        "origin": "ninja",
+        "cost": 2
     }
 ]
