@@ -1,0 +1,218 @@
+[
+    {
+        "base": "bfsword",
+        "combo": "bfsword",
+        "result": "infinityedge",
+        "desc": "Critical Strikes deal +100% damage"
+    },
+    {
+        "base": "bfsword",
+        "combo": "recurvebow",
+        "result": "swordofthedivine",
+        "desc": "Each second, the wearer has a 5% chance to gain 100% Critical Strike"
+    },
+    {
+        "base": "bfsword",
+        "combo": "needlesslylargerod",
+        "result": "hextechgunblade",
+        "desc": "Heal for 25% of all damage dealt"
+    },
+    {
+        "base": "bfsword",
+        "combo": "tearofthegoddess",
+        "result": "spearofshojin",
+        "desc": "After casting an ability, wearer gains 15% of its max mana per attack"
+    },
+    {
+        "base": "bfsword",
+        "combo": "chainvest",
+        "result": "guardianangel",
+        "desc": "Wearer revives with 500 Health"
+    },
+    {
+        "base": "bfsword",
+        "combo": "negatroncloak",
+        "result": "thebloodthirster",
+        "desc": "50% Lifesteal. Heal by 50% of the damage dealt by basic attacks."
+    },
+    {
+        "base": "bfsword",
+        "combo": "giantsbelt",
+        "result": "zekesherald",
+        "desc": "Adjacent allies gain +10% Attack Speed"
+    },
+    {
+        "base": "bfsword",
+        "combo": "spatula",
+        "result": "youmuusghostblade",
+        "desc": "Wearer is also an Assassin"
+    },
+    {
+        "base": "recurvebow",
+        "combo": "recurvebow",
+        "result": "rapidfirecannon",
+        "desc": "desc"
+    },
+    {
+        "base": "recurvebow",
+        "combo": "needlesslylargerod",
+        "result": "guinsoosrageblade",
+        "desc": "desc"
+    },
+    {
+        "base": "recurvebow",
+        "combo": "tearofthegoddess",
+        "result": "statikkshiv",
+        "desc": "desc"
+    },
+    {
+        "base": "recurvebow",
+        "combo": "chainvest",
+        "result": "phantomdancer",
+        "desc": "desc"
+    },
+    {
+        "base": "recurvebow",
+        "combo": "negatroncloak",
+        "result": "cursedblade",
+        "desc": "desc"
+    },
+    {
+        "base": "recurvebow",
+        "combo": "giantsbelt",
+        "result": "titanichydra",
+        "desc": "desc"
+    },
+    {
+        "base": "recurvebow",
+        "combo": "spatula",
+        "result": "bladeoftheruinedking",
+        "desc": "desc"
+    },
+    {
+        "base": "needlesslylargerod",
+        "combo": "needlesslylargerod",
+        "result": "rabadonsdeathcap",
+        "desc": "desc"
+    },
+    {
+        "base": "needlesslylargerod",
+        "combo": "tearofthegoddess",
+        "result": "ludensecho",
+        "desc": "desc"
+    },
+    {
+        "base": "needlesslylargerod",
+        "combo": "chainvest",
+        "result": "locketoftheironsolari",
+        "desc": "desc"
+    },
+    {
+        "base": "needlesslylargerod",
+        "combo": "negatroncloak",
+        "result": "ionicspark",
+        "desc": "desc"
+    },
+    {
+        "base": "needlesslylargerod",
+        "combo": "giantsbelt",
+        "result": "morellonomicon",
+        "desc": "desc"
+    },
+    {
+        "base": "needlesslylargerod",
+        "combo": "spatula",
+        "result": "yuumi",
+        "desc": "desc"
+    },
+    {
+        "base": "tearofthegoddess",
+        "combo": "tearofthegoddess",
+        "result": "seraphsembrace",
+        "desc": "desc"
+    },
+    {
+        "base": "tearofthegoddess",
+        "combo": "chainvest",
+        "result": "frozenheart",
+        "desc": "desc"
+    },
+    {
+        "base": "tearofthegoddess",
+        "combo": "negatroncloak",
+        "result": "hush",
+        "desc": "desc"
+    },
+    {
+        "base": "tearofthegoddess",
+        "combo": "giantsbelt",
+        "result": "redemption",
+        "desc": "desc"
+    },
+    {
+        "base": "tearofthegoddess",
+        "combo": "spatula",
+        "result": "darkin",
+        "desc": "desc"
+    },
+    {
+        "base": "chainvest",
+        "combo": "chainvest",
+        "result": "thornmail",
+        "desc": "desc"
+    },
+    {
+        "base": "chainvest",
+        "combo": "negatroncloak",
+        "result": "swordbreaker",
+        "desc": "desc"
+    },
+    {
+        "base": "chainvest",
+        "combo": "giantsbelt",
+        "result": "redbuff",
+        "desc": "desc"
+    },
+    {
+        "base": "chainvest",
+        "combo": "spatula",
+        "result": "knightsvow",
+        "desc": "desc"
+    },
+    {
+        "base": "negatroncloak",
+        "combo": "negatroncloak",
+        "result": "dragonsclaw",
+        "desc": "desc"
+    },
+    {
+        "base": "negatroncloak",
+        "combo": "giantsbelt",
+        "result": "zephyr",
+        "desc": "desc"
+    },
+    {
+        "base": "negatroncloak",
+        "combo": "spatula",
+        "result": "runaanshurricane",
+        "desc": "desc"
+    },
+    {
+        "base": "giantsbelt",
+        "combo": "giantsbelt",
+        "result": "warmogsarmour",
+        "desc": "desc"
+    },
+    {
+        "base": "giantsbelt",
+        "combo": "spatula",
+        "result": "frozenmallet",
+        "desc": "desc"
+    },
+    {
+        "base": "spatula",
+        "combo": "spatula",
+        "result": "forceofnature",
+        "desc": "desc"
+    }
+]

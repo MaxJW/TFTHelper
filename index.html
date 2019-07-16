@@ -5,6 +5,7 @@
 <head>
         <meta charset="utf-8">
         <title>TFT Helper</title>
+        
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-69981801-2"></script>
         <script>
@@ -13,6 +14,13 @@
                 gtag('js', new Date());
 
                 gtag('config', 'UA-69981801-2');
+        </script>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <script>
+                (adsbygoogle = window.adsbygoogle || []).push({
+                google_ad_client: "ca-pub-6528299985588319",
+                enable_page_level_ads: true
+                });
         </script>
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -63,6 +71,7 @@
                                                 <img class="s-item" src="img/items/spatula.png">
                                         </li>
                                 </ul>
+                                <div class="item-list"></div>
                                 <table class="item-combo-list">
                                         <thead>
                                                 <tr class="thi bfsword recurvebow needlesslylargerod tearofthegoddess chainvest negatroncloak giantsbelt spatula">
@@ -449,49 +458,75 @@
         </div>
 
         <script type="text/javascript">
-                window.onload = $('table.item-combo-list tr').hide().filter('.thi').show();
-        </script>
+                var curr_item = 'none';
 
-        <script>
+                window.onload = $('table.item-combo-list tr').hide().filter('.thi').show();
+
+                var itemFormat = function(cell){
+                        return "<img class='i-item' src='img/items/" + cell.getValue() + ".png'>";
+                }
                 var iconFormat = function(cell){ 
                         return "<img class='i-item' src='img/champions/" + cell.getValue() + ".png'>";
                 };
                 var classFormat = function(row){
                         if ((row.getData().class).indexOf(',') > -1) { 
                                 var dual = (row.getData().class).split(',');
-                                return "<img class='i-item' src='img/classes/" + dual[0] + ".png'><img class='i-item' src='img/classes/" + dual[1] + ".png'>";
+                                return "<img class='i-item' src='img/classes/" + dual[0] + ".png'><span style='padding-right: 7px;'></span><img class='i-item' src='img/classes/" + dual[1] + ".png'>";
                         }
                         return "<img class='i-item' src='img/classes/" + row.getData().class + ".png'>";
                 };
                 var originFormat = function(row){
                         if ((row.getData().origin).indexOf(',') > -1) { 
                                 var dual = (row.getData().origin).split(',');
-                                return "<img class='i-item' src='img/origins/" + dual[0] + ".png'><img class='i-item' src='img/origins/" + dual[1] + ".png'>";
+                                return "<img class='i-item' src='img/origins/" + dual[0] + ".png'><span style='padding-right: 7px;'></span><img class='i-item' src='img/origins/" + dual[1] + ".png'>";
                         }
                         return "<img class='i-item' src='img/origins/" + row.getData().origin + ".png'>";
                 };
 
-                var table = new Tabulator(".champion-list", {
+                var ctable = new Tabulator(".champion-list", {
                         ajaxURL:"./champions.json",
- 	                layout:"fitColumns", //fit columns to width of table (optional)
+ 	                layout:"fitColumns",
                         placeholder:"Please Select an Origin/Class",
                         resizableColumns:false,
  	                columns:[ //Define Table Columns
-	 	                {title:"Icon", field:"icon", formatter:iconFormat, headerSort:false},
-	 	                {title:"Name", field:"name", sorter:"string"},
-	 	                {title:"Class", field:"class", sorter:"string", formatter:classFormat},
-	 	                {title:"Origin", field:"origin", sorter:"string", formatter:originFormat},
-                                {title:"Cost", field:"cost", sorter:"number"},
+	 	                {title:"Icon", field:"icon", align:"center", widthGrow:1, formatter:iconFormat, headerSort:false},
+	 	                {title:"Name", field:"name", align:"center", widthGrow:2, sorter:"string"},
+	 	                {title:"Class", field:"class", align:"center", widthGrow:2, sorter:"string", formatter:classFormat},
+	 	                {title:"Origin", field:"origin", align:"center", widthGrow:2, sorter:"string", formatter:originFormat},
+                                {title:"Cost", field:"cost", align:"center", widthGrow:1, sorter:"number"},
  	                ],
  	                rowClick:function(e, row){ //trigger an alert message when the row is clicked
- 		                alert("Row " + row.getData().icon + " Clicked!!!!");
+ 		                alert("Row " + row.getData().icon + " Clicked!");
  	                },
                 });
-                table.redraw();
-                table.setFilter("name", "=", "none");
-        </script>
-        
-        <script>
+
+                var itable = new Tabulator(".item-list", {
+                        ajaxURL:"./items.json",
+ 	                layout:"fitColumns",
+                        columnVertAlign:"bottom",
+                        placeholder:"Please Select a Base Item",
+                        resizableColumns:false,
+ 	                columns:[ //Define Table Columns
+                                {
+                                        title:"Item Combination",
+                                        columns:[
+                                        {title:"Base", field:"base", sorter:"string", align:"center", widthGrow:1, formatter:itemFormat, headerSort:false},
+	 	                        {title:"Combo", field:"combo", sorter:"string", align:"center", widthGrow:1, formatter:itemFormat, headerSort:false},
+                                        ],
+                                },
+	 	                {title:"Result", field:"result", sorter:"string", align:"center", widthGrow:2, formatter:itemFormat, headerSort:false},
+                                {title:"Description", field:"desc", sorter:"string", widthGrow:3, headerSort:false},
+ 	                ],
+ 	                rowClick:function(e, row){ //trigger an alert message when the row is clicked
+ 		                alert("Row " + row.getData().base + row.getData().combo + " Clicked!");
+ 	                },
+                });
+
+                ctable.redraw();
+                ctable.setFilter("name", "=", "none");
+                itable.redraw();
+                itable.setFilter("base", "=", "none");
+
                 function championFilter(oc, val, e) {
                         var i = $('img', e);
                         console.log(oc, val);
@@ -501,39 +536,38 @@
                         
                         if (i.hasClass('active')) {
                                 i.removeClass('active');
-                                table.clearFilter();
+                                ctable.clearFilter();
                                 //table.setFilter("name", "=", "none");
                         } else {
                                 i.addClass('active');
-                                table.setFilter(oc, "=", val);
+                                ctable.setFilter(oc, "like", val);
                                 $('html,body').animate({ scrollTop: $(".champions").offset().top }, 'slow');
                         }
                 }
-                
-        </script>
-        
-        <script>
-                function allItemsDisplay(thsVal, e) {
-                        var itch = $('table.item-combo-list tr');
-                        var i = $('img', e);
 
+                function allItemsDisplay(thsVal, e) {
+                        //var itch = $('table.item-combo-list tr');
+                        var i = $('img', e);
+                        console.log(thsVal);
                         $(".item-selection-list>li>img.active").not(i).removeClass("active");
-                        itch.css('display', 'none');
+                        //itch.css('display', 'none');
 
                         if (i.hasClass('active')) {
                                 i.removeClass('active');
-                                itch.hide().filter('.thi').show();
+                                itable.setFilter("base", "=", "none");
+                                //itch.hide().filter('.thi').show();
                         } else {
                                 i.addClass('active');
-                                itch.hide().filter('.' + thsVal).show();
+                                curr_item = thsVal;
+                                itable.setFilter([[{field:"base", type:"=", value:thsVal},{field:"combo", type:"=", value:thsVal},]]);
+                                //itch.hide().filter('.' + thsVal).show();
                                 if ($(window).height() <= 800) {
-                                        $('html,body').animate({ scrollTop: $(".item-combo-list").offset().top }, 'slow');
+                                        $('html,body').animate({ scrollTop: $(".items").offset().top }, 'slow');
                                 }
                         }
-
                         //Table Colouring
-                        $("table.item-combo-list tr").css("background-color", "#fff");
-                        $("table.item-combo-list tr:visible:odd").css("background-color", "rgb(245, 245, 245)");
+                        //$("table.item-combo-list tr").css("background-color", "#fff");
+                        //$("table.item-combo-list tr:visible:odd").css("background-color", "rgb(245, 245, 245)");
                 }
         </script>
         </body>
