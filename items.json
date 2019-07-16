@@ -51,168 +51,168 @@
         "base": "recurvebow",
         "combo": "recurvebow",
         "result": "rapidfirecannon",
-        "desc": "desc"
+        "desc": "Attacks cannot be dodged. Attack Range is doubled."
     },
     {
         "base": "recurvebow",
         "combo": "needlesslylargerod",
         "result": "guinsoosrageblade",
-        "desc": "desc"
+        "desc": "Attacks give 3% Attack Speed. Stacks infinitely."
     },
     {
         "base": "recurvebow",
         "combo": "tearofthegoddess",
         "result": "statikkshiv",
-        "desc": "desc"
+        "desc": "Every 3rd attack deals 100 splash magical damage."
     },
     {
         "base": "recurvebow",
         "combo": "chainvest",
         "result": "phantomdancer",
-        "desc": "desc"
+        "desc": "Wearer dodges all Critical Strikes."
     },
     {
         "base": "recurvebow",
         "combo": "negatroncloak",
         "result": "cursedblade",
-        "desc": "desc"
+        "desc": "Attacks have a low chance to Shrink (-1 enemy star level 1)."
     },
     {
         "base": "recurvebow",
         "combo": "giantsbelt",
         "result": "titanichydra",
-        "desc": "desc"
+        "desc": "Attacks deal 10% of the wearer's max HP as splash."
     },
     {
         "base": "recurvebow",
         "combo": "spatula",
         "result": "bladeoftheruinedking",
-        "desc": "desc"
+        "desc": "Wearer is also a Blademaster"
     },
     {
         "base": "needlesslylargerod",
         "combo": "needlesslylargerod",
         "result": "rabadonsdeathcap",
-        "desc": "desc"
+        "desc": "Wearer's Ability Damage increased by 50%"
     },
     {
         "base": "needlesslylargerod",
         "combo": "tearofthegoddess",
         "result": "ludensecho",
-        "desc": "desc"
+        "desc": "Deal 200 splash damage on ability hit."
     },
     {
         "base": "needlesslylargerod",
         "combo": "chainvest",
         "result": "locketoftheironsolari",
-        "desc": "desc"
+        "desc": "On start of combat, adjacent allies get 200 shield."
     },
     {
         "base": "needlesslylargerod",
         "combo": "negatroncloak",
         "result": "ionicspark",
-        "desc": "desc"
+        "desc": "Whenever an enemy casts a spell they take 200 damage."
     },
     {
         "base": "needlesslylargerod",
         "combo": "giantsbelt",
         "result": "morellonomicon",
-        "desc": "desc"
+        "desc": "Spells burn 2.5% of the enemy max HP per second."
     },
     {
         "base": "needlesslylargerod",
         "combo": "spatula",
         "result": "yuumi",
-        "desc": "desc"
+        "desc": "Wearer is also a Sorcerer."
     },
     {
         "base": "tearofthegoddess",
         "combo": "tearofthegoddess",
         "result": "seraphsembrace",
-        "desc": "desc"
+        "desc": "Regain 20 mana each time a spell is cast."
     },
     {
         "base": "tearofthegoddess",
         "combo": "chainvest",
         "result": "frozenheart",
-        "desc": "desc"
+        "desc": "Adjacent enemies lose 20% Attack Speed."
     },
     {
         "base": "tearofthegoddess",
         "combo": "negatroncloak",
         "result": "hush",
-        "desc": "desc"
+        "desc": "Attacks have a high chance to Silence."
     },
     {
         "base": "tearofthegoddess",
         "combo": "giantsbelt",
         "result": "redemption",
-        "desc": "desc"
+        "desc": "On death heal all nearby allies for 1000 HP."
     },
     {
         "base": "tearofthegoddess",
         "combo": "spatula",
         "result": "darkin",
-        "desc": "desc"
+        "desc": "Wearer is also a Demon."
     },
     {
         "base": "chainvest",
         "combo": "chainvest",
         "result": "thornmail",
-        "desc": "desc"
+        "desc": "Reflect 35% of damage taken from attacks."
     },
     {
         "base": "chainvest",
         "combo": "negatroncloak",
         "result": "swordbreaker",
-        "desc": "desc"
+        "desc": "Attacks have a chance to disarm."
     },
     {
         "base": "chainvest",
         "combo": "giantsbelt",
         "result": "redbuff",
-        "desc": "desc"
+        "desc": "Attacks burn for 2.5% max HP and disable healing."
     },
     {
         "base": "chainvest",
         "combo": "spatula",
         "result": "knightsvow",
-        "desc": "desc"
+        "desc": "Wearer is also a Knight."
     },
     {
         "base": "negatroncloak",
         "combo": "negatroncloak",
         "result": "dragonsclaw",
-        "desc": "desc"
+        "desc": "83% resistance to magic damage."
     },
     {
         "base": "negatroncloak",
         "combo": "giantsbelt",
         "result": "zephyr",
-        "desc": "desc"
+        "desc": "On start of combat banish an enemy."
     },
     {
         "base": "negatroncloak",
         "combo": "spatula",
         "result": "runaanshurricane",
-        "desc": "desc"
+        "desc": "Attacks hit additional enemies and deal 50% damage."
     },
     {
         "base": "giantsbelt",
         "combo": "giantsbelt",
         "result": "warmogsarmour",
-        "desc": "desc"
+        "desc": "Regenerate 3% Max Health per second."
     },
     {
         "base": "giantsbelt",
         "combo": "spatula",
         "result": "frozenmallet",
-        "desc": "desc"
+        "desc": "Wearer is also a Glacial."
     },
     {
         "base": "spatula",
         "combo": "spatula",
         "result": "forceofnature",
-        "desc": "desc"
+        "desc": "Gain +1 team size."
     }
 ]
