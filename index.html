@@ -11,6 +11,10 @@
         <meta name="author" content="MaxWilson">
         <link rel="stylesheet" href="style.css">
         <script src="jquery-3.4.1.min.js"></script>
+
+        <link href="https://unpkg.com/tabulator-tables@4.2.7/dist/css/tabulator.min.css" rel="stylesheet">
+<script type="text/javascript" src="https://unpkg.com/tabulator-tables@4.2.7/dist/js/tabulator.min.js"></script>
+        
         <link rel="apple-touch-icon" href="img/tft-hs-icon.png">
         <link rel="manifest" href="manifest.json">
 </head>
@@ -265,7 +269,7 @@
                         <hr>
                         <div class="origins">
                                 <h2>Origins</h2>
-                                <ul class="origins-selection-list">
+                                <ul class="origin-selection-list">
                                         <li id="demon" onclick="championFilter('origin', this.id, this);">
                                                 <img class="s-item" src="img/origins/demon.png">
                                         </li>
@@ -373,22 +377,7 @@
                         <hr>
                         <div class="champions">
                                 <h2>Champions</h2>
-                                <div class="table-wrapper">
-                                        <table class="champion-list">
-                                                <thead>
-                                                        <tr class="info">
-                                                                <th>Icon</th>
-                                                                <th>Champion</th>
-                                                                <th>Class</th>
-                                                                <th>Origin</th>
-                                                                <th>Cost</th>
-                                                        </tr>
-                                                </thead>
-                                                <tbody>
-                                                        <tr style="background-color:rgb(245, 245, 245)"><td colspan="5">Please Select a Class/Origin</td></tr>
-                                                </tbody>
-                                        </table>
-                                </div>
+                                <div class="champion-list"></div>
                                 <ul class="champions-selection-list">
                                         <li class="blademaster demon three-cost"><img class="s-item" src="img/champions/aatrox.png"></li>
                                         <li class="sorcerer wild two-cost"><img class="s-item" src="img/champions/ahri.png"></li>
@@ -449,28 +438,46 @@
                         <a href="http://www.maxwilson.co.uk/" target="_blank">Max Wilson</a>
                 </footer>
         </div>
+
         <script type="text/javascript">
                 window.onload = $('table.item-combo-list tr').hide().filter('.thi').show();
         </script>
-        <!-- The core Firebase JS SDK is always required and must be listed first -->
-        <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-app.js"></script>
-        
-        <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-firestore.js"></script>
-        <script>
-                // Your web app's Firebase configuration
-                var firebaseConfig = {
-                        apiKey: "AIzaSyDJPaJa1iP_FWeq7YIUjWCqPalj7uQhYag",
-                        authDomain: "tfthelper-77e5e.firebaseapp.com",
-                        databaseURL: "https://tfthelper-77e5e.firebaseio.com",
-                        projectId: "tfthelper-77e5e",
-                        storageBucket: "",
-                        messagingSenderId: "635216016657",
-                        appId: "1:635216016657:web:c1ae76ac4cccd681"
-                };
-                // Initialize Firebase
-                firebase.initializeApp(firebaseConfig);
 
-                var db = firebase.firestore();
+        <script>
+                var iconFormat = function(cell){ 
+                        return "<img class='s-item' src='img/champions/" + cell.getValue() + ".png'>";
+                };
+                var classFormat = function(row){
+                        if ((row.getData().class).indexOf(',') > -1) { 
+                                var dual = (row.getData().class).split(',');
+                                return "<img class='s-item' src='img/classes/" + dual[0] + ".png'><img class='s-item' src='img/classes/" + dual[1] + ".png'>";
+                        }
+                        return "<img class='s-item' src='img/classes/" + row.getData().class + ".png'>";
+                };
+                var originFormat = function(row){
+                        if ((row.getData().origin).indexOf(',') > -1) { 
+                                var dual = (row.getData().origin).split(',');
+                                return "<img class='s-item' src='img/origins/" + dual[0] + ".png'><img class='s-item' src='img/origins/" + dual[1] + ".png'>";
+                        }
+                        return "<img class='s-item' src='img/origins/" + row.getData().origin + ".png'>";
+                };
+
+                var table = new Tabulator(".champion-list", {
+                        ajaxURL:"./champions.json",
+ 	                layout:"fitColumns", //fit columns to width of table (optional)
+                        placeholder:"No Data Set",
+                        resizableColumns:false,
+ 	                columns:[ //Define Table Columns
+	 	                {title:"Icon", field:"icon", formatter:iconFormat, headerSort:false},
+	 	                {title:"Name", field:"name", sorter:"string"},
+	 	                {title:"Class", field:"class", sorter:"string", formatter:classFormat},
+	 	                {title:"Origin", field:"origin", sorter:"string", formatter:originFormat},
+                                {title:"Cost", field:"cost", sorter:"number"},
+ 	                ],
+ 	                rowClick:function(e, row){ //trigger an alert message when the row is clicked
+ 		                alert("Row " + row.getData().icon + " Clicked!!!!");
+ 	                },
+                });
         </script>
         
         <script>
@@ -478,43 +485,19 @@
                         var i = $('img', e);
                         console.log(oc, val);
 
-                        $("." + oc + "-selection-list>li>img.active").not(i).removeClass("active");
-
+                        $(".class-selection-list>li>img.active").not(i).removeClass("active");
+                        $(".origin-selection-list>li>img.active").not(i).removeClass("active");
+                        
                         if (i.hasClass('active')) {
                                 i.removeClass('active');
-                                $(".champion-list tbody tr").remove();
-                                $('.champion-list tbody').append('<tr style="background-color:rgb(245, 245, 245)"><td colspan="5">Please Select a Class/Origin</td></tr>');
+                                table.clearFilter();
                         } else {
                                 i.addClass('active');
-                                db.collection("champions").where(oc, "==", val).get().then(function (querySnapshot) {
-                                        var content = '';
-                                        querySnapshot.forEach(function (doc) {
-                                                // doc.data() is never undefined for query doc snapshots
-                                                console.log(doc.id, " => ", doc.data());
-                                                var val = doc.data();
-                                                content += '<tr>';
-                                                content += '<td><img class="s-item" src="img/champions/' + val.icon + '.png"></td>'
-                                                content += '<td>' + val.name + '</td>';
-                                                //content += '<td>' + (val.class).charAt(0).toUpperCase() + (val.class).slice(1) + '</td>';
-                                                //content += '<td>' + (val.origin).charAt(0).toUpperCase() + (val.origin).slice(1) + '</td>';
-                                                content += '<td><img class="s-item" src="img/classes/' + val.class + '.png"></td>'
-                                                content += '<td><img class="s-item" src="img/origins/' + val.origin + '.png"></td>'
-                                                content += '<td>' + val.cost + '</td>';
-                                                content += '</tr>';
-                                        });
-                                        $(".champion-list tbody tr").remove();
-                                        $('.champion-list tbody').append(content);
-                                })
-                                        .catch(function (error) {
-                                                console.log("Error getting documents: ", error);
-                                        });
-                                
+                                table.setFilter(oc, "=", val);
                                 $('html,body').animate({ scrollTop: $(".champions").offset().top }, 'slow');
-                                $("table.champion-list tbody tr").css("background-color", "#fff");
-
-                                $("table.champion-list tbody tr:even").css("background-color", "rgb(245, 245, 245)");
                         }
                 }
+                
         </script>
         
         <script>
@@ -543,4 +526,4 @@
         </script>
         </body>
         
-        </html>
+</html>

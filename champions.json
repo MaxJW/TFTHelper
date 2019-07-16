@@ -1,0 +1,170 @@
+[
+    {
+        "icon": "aatrox",
+        "name": "Aatrox",
+        "class": "blademaster",
+        "origin": "demon",
+        "cost": 3
+    },
+    {
+        "icon": "ahri",
+        "name": "Ahri",
+        "class": "sorcerer",
+        "origin": "wild",
+        "cost": 2
+    },
+    {
+        "icon": "akali",
+        "name": "Akali",
+        "class": "assassin",
+        "origin": "ninja",
+        "cost": 4
+    },
+    {
+        "icon": "anivia",
+        "name": "Anivia",
+        "class": "elementalist",
+        "origin": "glacial",
+        "cost": 5
+    },
+    {
+        "icon": "ashe",
+        "name": "Ashe",
+        "class": "ranger",
+        "origin": "glacial",
+        "cost": 3
+    },
+    {
+        "icon": "aurelion-sol",
+        "name": "Aurelion Sol",
+        "class": "sorcerer",
+        "origin": "dragon",
+        "cost": 4
+    },
+    {
+        "icon": "blitzcrank",
+        "name": "Blitzcrank",
+        "class": "brawler",
+        "origin": "robot",
+        "cost": 2
+    },
+    {
+        "icon": "brand",
+        "name": "Brand",
+        "class": "elementalist",
+        "origin": "demon",
+        "cost": 4
+    },
+    {
+        "icon": "braum",
+        "name": "Braum",
+        "class": "guardian",
+        "origin": "glacial",
+        "cost": 2
+    },
+    {
+        "icon": "chogath",
+        "name": "Cho'Gath",
+        "class": "brawler",
+        "origin": "void",
+        "cost": 4
+    },
+    {
+        "icon": "darius",
+        "name": "Darius",
+        "class": "knight",
+        "origin": "imperial",
+        "cost": 1
+    },
+    {
+        "icon": "draven",
+        "name": "Draven",
+        "class": "blademaster",
+        "origin": "imperial",
+        "cost": 4
+    },
+    {
+        "icon": "elise",
+        "name": "Elise",
+        "class": "shapeshifter",
+        "origin": "demon",
+        "cost": 1
+    },
+    {
+        "icon": "evelynn",
+        "name": "Evelynn",
+        "class": "assassin",
+        "origin": "demon",
+        "cost": 3
+    },
+    {
+        "icon": "fiora",
+        "name": "Fiora",
+        "class": "blademaster",
+        "origin": "noble",
+        "cost": 1
+    },
+    {
+        "icon": "gangplank",
+        "name": "Gangplank",
+        "class": "gunslinger,blademaster",
+        "origin": "pirate",
+        "cost": 3
+    },
+    {
+        "icon": "garen",
+        "name": "Garen",
+        "class": "knight",
+        "origin": "noble",
+        "cost": 1
+    },
+    {
+        "icon": "gnar",
+        "name": "Gnar",
+        "class": "shapeshifter",
+        "origin": "wild,yordle",
+        "cost": 4
+    },
+    {
+        "icon": "graves",
+        "name": "Graves",
+        "class": "gunslinger",
+        "origin": "pirate",
+        "cost": 1
+    },
+    {
+        "icon": "karthus",
+        "name": "Karthus",
+        "class": "sorcerer",
+        "origin": "phantom",
+        "cost": 5
+    },
+    {
+        "icon": "kassadin",
+        "name": "Kassadin",
+        "class": "sorcerer",
+        "origin": "void",
+        "cost": 1
+    },
+    {
+        "icon": "katarina",
+        "name": "Katarina",
+        "class": "assassin",
+        "origin": "noble",
+        "cost": 3
+    },
+    {
+        "icon": "kayle",
+        "name": "Kayle",
+        "class": "knight",
+        "origin": "noble",
+        "cost": 5
+    },
+    {
+        "icon": "kennen",
+        "name": "Kennen",
+        "class": "elementalist",
+        "origin": "ninja,yordle",
+        "cost": 5
+    }
+]
