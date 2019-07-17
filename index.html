@@ -229,6 +229,11 @@
 
                 window.onload = $('table.item-combo-list tr').hide().filter('.thi').show();
 
+                $('ul.champions-selection-list li img').click(function(e) 
+                { 
+                        alert("Champion pages not implemented yet, sorry!");
+                });
+
                 var custom = function(cell){
                         //Fix styling here
                         return "<div style='position: relative'><div style='position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);'>" + cell.getValue() + "</div></div>";
@@ -267,9 +272,9 @@
 	 	                {title:"Origin", field:"origin", align:"center", widthGrow:3, sorter:"string", formatter:originFormat},
                                 {title:"Cost", field:"cost", align:"center", widthGrow:2, sorter:"number"},
  	                ],
- 	                rowClick:function(e, row){ //trigger an alert message when the row is clicked
+ 	                /*rowClick:function(e, row){ //trigger an alert message when the row is clicked
  		                alert("Row " + row.getData().icon + " Clicked!");
- 	                },
+ 	                },*/
                 });
 
                 var itable = new Tabulator(".item-list", {
@@ -289,9 +294,9 @@
 	 	                {title:"Result", field:"result", sorter:"string", align:"center", widthGrow:2, formatter:itemFormat, headerSort:false},
                                 {title:"Description", field:"desc", sorter:"string", formatter:"textarea", widthGrow:4, headerSort:false},
  	                ],
- 	                rowClick:function(e, row){ //trigger an alert message when the row is clicked
+ 	                /*rowClick:function(e, row){ //trigger an alert message when the row is clicked
  		                alert("Row " + row.getData().base + row.getData().combo + " Clicked!");
- 	                },
+ 	                },*/
                 });
 
                 ctable.redraw();
@@ -308,7 +313,8 @@
                         
                         if (i.hasClass('active')) {
                                 i.removeClass('active');
-                                ctable.setFilter("name", "=", "none");
+                                //ctable.setFilter("name", "=", "none");
+                                ctable.removeFilter();
                         } else {
                                 i.addClass('active');
                                 ctable.setFilter(oc, "like", val);
