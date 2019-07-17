@@ -73,15 +73,26 @@ hr {
     background-color: var(--blue);
     position: absolute;
     bottom: 0;
-}
-
-.footer a {
-    color: white;
+    justify-content: space-between;
     vertical-align: middle;
     text-align: center;
+}
+
+.footer > div {
+    width: 125px;
+    height: 3rem;
+    vertical-align: middle;
+    color: white;
     font-size: 1rem;
     font-weight: 300;
-    width: 100%;
+}
+
+.me_link a{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
 }
 
 .content h2 {

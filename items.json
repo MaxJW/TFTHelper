@@ -27,19 +27,19 @@
         "base": "bfsword",
         "combo": "chainvest",
         "result": "guardianangel",
-        "desc": "Wearer revives with 500 Health"
+        "desc": "Wearer revives with 1000 Health"
     },
     {
         "base": "bfsword",
         "combo": "negatroncloak",
         "result": "thebloodthirster",
-        "desc": "50% Lifesteal. Heal by 50% of the damage dealt by basic attacks."
+        "desc": "35% Lifesteal."
     },
     {
         "base": "bfsword",
         "combo": "giantsbelt",
         "result": "zekesherald",
-        "desc": "Adjacent allies gain +10% Attack Speed"
+        "desc": "Champions two spaces to the left and right of the wearer on combat begin with 15% Attack Speed."
     },
     {
         "base": "bfsword",
@@ -51,19 +51,19 @@
         "base": "recurvebow",
         "combo": "recurvebow",
         "result": "rapidfirecannon",
-        "desc": "Attacks cannot be dodged. Attack Range is doubled."
+        "desc": "Wearer's attacks cannot be dodged. Attack Range is doubled."
     },
     {
         "base": "recurvebow",
         "combo": "needlesslylargerod",
         "result": "guinsoosrageblade",
-        "desc": "Attacks give 3% Attack Speed. Stacks infinitely."
+        "desc": "Attacks grant 4% Attack Speed. Stacks infinitely."
     },
     {
         "base": "recurvebow",
         "combo": "tearofthegoddess",
         "result": "statikkshiv",
-        "desc": "Every 3rd attack deals 100 splash magical damage."
+        "desc": "Every 3rd attack deals 100 splash magical damage to 3 additional targets."
     },
     {
         "base": "recurvebow",
@@ -75,13 +75,13 @@
         "base": "recurvebow",
         "combo": "negatroncloak",
         "result": "cursedblade",
-        "desc": "Attacks have a low chance to Shrink (-1 enemy star level 1)."
+        "desc": "Attacks have a low chance to Shrink (-1 to enemies star level)."
     },
     {
         "base": "recurvebow",
         "combo": "giantsbelt",
         "result": "titanichydra",
-        "desc": "Attacks deal 10% of the wearer's max HP as splash."
+        "desc": "Attacks deal 10% of the wearer's max Health as splash damage."
     },
     {
         "base": "recurvebow",
@@ -93,31 +93,31 @@
         "base": "needlesslylargerod",
         "combo": "needlesslylargerod",
         "result": "rabadonsdeathcap",
-        "desc": "Wearer's Ability Damage increased by 50%"
+        "desc": "Spell Damage +50% Ability Power."
     },
     {
         "base": "needlesslylargerod",
         "combo": "tearofthegoddess",
         "result": "ludensecho",
-        "desc": "Deal 200 splash damage on ability hit."
+        "desc": "Spells deal 200 splash damage on hit."
     },
     {
         "base": "needlesslylargerod",
         "combo": "chainvest",
         "result": "locketoftheironsolari",
-        "desc": "On start of combat, adjacent allies get 200 shield."
+        "desc": "On start of combat, the wearer and champions two spaces to the left and right of the wearer begin with 300 shields."
     },
     {
         "base": "needlesslylargerod",
         "combo": "negatroncloak",
         "result": "ionicspark",
-        "desc": "Whenever an enemy casts a spell they take 200 damage."
+        "desc": "Whenever an enemy casts a spell they take 200 true damage."
     },
     {
         "base": "needlesslylargerod",
         "combo": "giantsbelt",
         "result": "morellonomicon",
-        "desc": "Spells burn 2.5% of the enemy max HP per second."
+        "desc": "Spells deal burn damage equal to 3% of the enemy's maximum health per second."
     },
     {
         "base": "needlesslylargerod",
@@ -147,7 +147,7 @@
         "base": "tearofthegoddess",
         "combo": "giantsbelt",
         "result": "redemption",
-        "desc": "On death heal all nearby allies for 1000 HP."
+        "desc": "Triggers at 25% health, heall all nearby allies for 1000 Health"
     },
     {
         "base": "tearofthegoddess",
@@ -159,7 +159,7 @@
         "base": "chainvest",
         "combo": "chainvest",
         "result": "thornmail",
-        "desc": "Reflect 35% of damage taken from attacks."
+        "desc": "Reflect 100% of damage mitigated from attacks as true damage"
     },
     {
         "base": "chainvest",
@@ -171,7 +171,7 @@
         "base": "chainvest",
         "combo": "giantsbelt",
         "result": "redbuff",
-        "desc": "Attacks burn for 2.5% max HP and disable healing."
+        "desc": "Attacks burn for 2.5% Max Health and disable healing."
     },
     {
         "base": "chainvest",
@@ -189,19 +189,19 @@
         "base": "negatroncloak",
         "combo": "giantsbelt",
         "result": "zephyr",
-        "desc": "On start of combat banish an enemy."
+        "desc": "On start of combat banish an enemy for 5 seconds."
     },
     {
         "base": "negatroncloak",
         "combo": "spatula",
         "result": "runaanshurricane",
-        "desc": "Attacks hit additional enemies and deal 50% damage."
+        "desc": "Attacks 1 additional enemies. These additional attacks deal 25% damage."
     },
     {
         "base": "giantsbelt",
         "combo": "giantsbelt",
         "result": "warmogsarmour",
-        "desc": "Regenerate 3% Max Health per second."
+        "desc": "Regenerate 6% Max Health per second."
     },
     {
         "base": "giantsbelt",
