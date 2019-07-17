@@ -300,7 +300,8 @@
                 });
 
                 ctable.redraw();
-                ctable.setFilter("name", "=", "none");
+                //ctable.setFilter("name", "=", "none");
+                ctable.clearFilter();
                 itable.redraw();
                 itable.setFilter("base", "=", "none");
 
@@ -314,7 +315,7 @@
                         if (i.hasClass('active')) {
                                 i.removeClass('active');
                                 //ctable.setFilter("name", "=", "none");
-                                ctable.removeFilter();
+                                ctable.clearFilter();
                         } else {
                                 i.addClass('active');
                                 ctable.setFilter(oc, "like", val);
