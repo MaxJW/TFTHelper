@@ -290,7 +290,7 @@
         "icon": "swain",
         "name": "Swain",
         "class": "shapeshifter",
-        "origin": "noble,demon",
+        "origin": "imperial,demon",
         "cost": 5
     },
     {
