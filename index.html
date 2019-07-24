@@ -355,6 +355,11 @@
                                 }
                         }
                 }
+
+                $(window).on('resize', function(){
+                        ctable.redraw();
+                        itable.redraw();
+                });
         </script>
         </body>
         
