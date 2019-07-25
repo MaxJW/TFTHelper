@@ -3,7 +3,7 @@
         "base": "bfsword",
         "combo": "bfsword",
         "result": "infinityedge",
-        "desc": "Critical Strikes deal +100% damage"
+        "desc": "Critical Strikes deal +150% damage"
     },
     {
         "base": "bfsword",
@@ -75,7 +75,7 @@
         "base": "recurvebow",
         "combo": "negatroncloak",
         "result": "cursedblade",
-        "desc": "Attacks have a low chance to Shrink (-1 to enemies star level)."
+        "desc": "Attacks have a 20% to Shrink (-1 to enemies star level)."
     },
     {
         "base": "recurvebow",
@@ -105,7 +105,7 @@
         "base": "needlesslylargerod",
         "combo": "chainvest",
         "result": "locketoftheironsolari",
-        "desc": "On start of combat, the wearer and champions two spaces to the left and right of the wearer begin with 300 shields."
+        "desc": "On start of combat, the wearer and champions two spaces to the left and right of the wearer begin with 200 shields."
     },
     {
         "base": "needlesslylargerod",
@@ -117,7 +117,7 @@
         "base": "needlesslylargerod",
         "combo": "giantsbelt",
         "result": "morellonomicon",
-        "desc": "Spells deal burn damage equal to 3% of the enemy's maximum health per second."
+        "desc": "Spells deal burn damage equal to 5% of the enemy's maximum health per second."
     },
     {
         "base": "needlesslylargerod",
@@ -141,7 +141,7 @@
         "base": "tearofthegoddess",
         "combo": "negatroncloak",
         "result": "hush",
-        "desc": "Attacks have a high chance to Silence."
+        "desc": "Attacks have a 50% chance to Silence."
     },
     {
         "base": "tearofthegoddess",
@@ -165,7 +165,7 @@
         "base": "chainvest",
         "combo": "negatroncloak",
         "result": "swordbreaker",
-        "desc": "Attacks have a chance to disarm."
+        "desc": "Attacks have a 25% chance to disarm."
     },
     {
         "base": "chainvest",
