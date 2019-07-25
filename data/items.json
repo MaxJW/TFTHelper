@@ -1,6 +1,54 @@
 [
     {
         "base": "bfsword",
+        "combo": "blank",
+        "result": "blank",
+        "desc": "+20 Attack Damage"
+    },
+    {
+        "base": "recurvebow",
+        "combo": "blank",
+        "result": "blank",
+        "desc": "+20% Attack Speed"
+    },
+    {
+        "base": "needlesslylargerod",
+        "combo": "blank",
+        "result": "blank",
+        "desc": "+20% Spell Damage"
+    },
+    {
+        "base": "tearofthegoddess",
+        "combo": "blank",
+        "result": "blank",
+        "desc": "+20 Mana"
+    },
+    {
+        "base": "chainvest",
+        "combo": "blank",
+        "result": "blank",
+        "desc": "+20 Armour"
+    },
+    {
+        "base": "negatroncloak",
+        "combo": "blank",
+        "result": "blank",
+        "desc": "+20 Magic Resist"
+    },
+    {
+        "base": "giantsbelt",
+        "combo": "blank",
+        "result": "blank",
+        "desc": "+200 Health"
+    },
+    {
+        "base": "spatula",
+        "combo": "blank",
+        "result": "blank",
+        "desc": "Doubles the stat power of its sister component"
+    },
+    {
+        "base": "bfsword",
         "combo": "bfsword",
         "result": "infinityedge",
         "desc": "Critical Strikes deal +150% damage"

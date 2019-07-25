@@ -250,6 +250,10 @@ li.five-cost img.active {
     font-size: 0.8rem;
 }
 
+table.origin-bonuses, table.class-bonuses {
+    
+}
+
 @media (min-width:600px) {
     .content {
         margin: 0rem 1.5rem -4rem 1.5rem;
