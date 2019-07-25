@@ -165,7 +165,7 @@
         "name": "Kennen",
         "class": "elementalist",
         "origin": "ninja,yordle",
-        "cost": 5
+        "cost": 3
     },
     {
         "icon": "khazix",

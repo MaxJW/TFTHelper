@@ -133,6 +133,7 @@
                                                 <img class="s-item" src="img/origins/yordle.png">
                                         </li>
                                 </ul>
+
                         </div>
                         <hr>
                         <div class="classes">
@@ -250,30 +251,45 @@
                 });
 
                 var custom = function(cell){
-                        //Fix styling here
-                        return "<div style='position: relative'><div style='position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);'>" + cell.getValue() + "</div></div>";
+                        //Fix centering here
+                        return "<div style='position: relative; width: 100%; height: 100%;'><div style='position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);'>" + cell.getValue() + "</div></div>";
                 }
-
                 var itemFormat = function(cell){
                         return "<img class='i-item' style='vertical-align: middle;' src='img/items/" + cell.getValue() + ".png'>";
                 }
-                var iconFormat = function(cell){ 
-                        return "<img class='i-item' src='img/champions/" + cell.getValue() + ".png'>";
+                var iconFormat = function(row, cell){
+                        var info = row.getData().cost;
+                        var input = "";
+                        if (info == 1) {
+                                input = "one-cost"
+                        } else if (info == 2) {
+                                input = "two-cost";
+                        } else if (info == 3) {
+                                input = "three-cost";
+                        } else if (info == 4) {
+                                input = "four-cost";
+                        } else {
+                                input = "five-cost";
+                        }
+                        return "<img class='i-item " + input + "' src='img/champions/" + row.getData().icon + ".png'>";
                 };
                 var classFormat = function(row){
                         if ((row.getData().class).indexOf(',') > -1) { 
                                 var dual = (row.getData().class).split(',');
-                                return "<img class='d-item' src='img/classes/" + dual[0] + ".png'><span style='padding-right: 7px;'></span><img class='d-item' src='img/classes/" + dual[1] + ".png'>";
+                                return "<div style='position: relative; width: 100%; height: 100%;'><div style='position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);'><img class='d-item' src='img/classes/" + dual[0] + ".png'><span style='padding-right: 7px;'></span><img class='d-item' src='img/classes/" + dual[1] + ".png'>";
                         }
                         return "<img class='i-item' src='img/classes/" + row.getData().class + ".png'>";
                 };
                 var originFormat = function(row){
                         if ((row.getData().origin).indexOf(',') > -1) { 
                                 var dual = (row.getData().origin).split(',');
-                                return "<img class='d-item' src='img/origins/" + dual[0] + ".png'><span style='padding-right: 7px;'></span><img class='d-item' src='img/origins/" + dual[1] + ".png'>";
+                                return "<div style='position: relative; width: 100%; height: 100%;'><div style='position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);'><img class='d-item' src='img/origins/" + dual[0] + ".png'><span style='padding-right: 7px;'></span><img class='d-item' src='img/origins/" + dual[1] + ".png'>";
                         }
                         return "<img class='i-item' src='img/origins/" + row.getData().origin + ".png'>";
                 };
+                var costFormat = function(cell){
+                        return "<div style='position: relative; width: 100%; height: 100%;'><div style='position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);'><img class='cost-img' src='img/coins.png'> " + cell.getValue() + "</div></div>";
+                }
 
                 var ctable = new Tabulator(".champion-list", {
                         ajaxURL:"./data/champions.json",
@@ -285,7 +301,7 @@
 	 	                {title:"Name", field:"name", align:"center", widthGrow:4, formatter:custom, sorter:"string"},
 	 	                {title:"Class", field:"class", align:"center", widthGrow:3, sorter:"string", formatter:classFormat},
 	 	                {title:"Origin", field:"origin", align:"center", widthGrow:3, sorter:"string", formatter:originFormat},
-                                {title:"Cost", field:"cost", align:"center", widthGrow:2, sorter:"number"},
+                                {title:"Cost", field:"cost", align:"center", widthGrow:2, sorter:"number", formatter:costFormat},
  	                ],
  	                /*rowClick:function(e, row){ //trigger an alert message when the row is clicked
  		                alert("Row " + row.getData().icon + " Clicked!");
@@ -334,7 +350,7 @@
                         } else {
                                 i.addClass('active');
                                 ctable.setFilter(oc, "like", val);
-                                $('html,body').animate({ scrollTop: $(".champions").offset().top }, 'slow');
+                                //$('html,body').animate({ scrollTop: $(".champions").offset().top }, 'slow');
                         }
                 }
 
