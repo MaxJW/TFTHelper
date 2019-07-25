@@ -776,6 +776,8 @@
                         });
 
                         if (i.hasClass('active')) {
+                                $('table.class-bonuses > tbody').hide();
+                                $('table.origin-bonuses > tbody').hide();
                                 i.removeClass('active');
                                 //ctable.setFilter("name", "=", "none");
                                 ctable.clearFilter();
@@ -810,5 +812,4 @@
                 });
         </script>
         </body>
-        
 </html>
